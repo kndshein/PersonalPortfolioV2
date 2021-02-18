@@ -10,8 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div class="landing-text">
       <h1>
-        Yello! My name is Kaung,
-        <span>pronounced like King </span>
+        Yello! My name is Kaung, <span>pronounced like King </span>
         <span>Kong.</span>
       </h1>
       <p>

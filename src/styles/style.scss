@@ -51,7 +51,10 @@ a {
   }
 }
 
-@import "./navbar/navbar";
+@import "./components/navbar";
+@import "./pages/index";
+@import "./pages/about";
+@import "./components/footer";
 
 @media only screen and (min-width: 1024px) {
   body {
