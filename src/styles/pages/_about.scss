@@ -1,14 +1,14 @@
 #profile-pic {
-  border-radius: 50%;
+  display: block;
   width: calc(min(15vw, 250px));
   min-width: 200px;
   height: calc(min(15vw, 250px));
   min-height: 200px;
-  display: block;
   margin: 0 auto 3vw auto;
   margin-top: calc(max(2vw, 50px));
   object-fit: cover;
   border: 1px solid $primarycolor;
+  border-radius: 50%;
 }
 
 .about-text {
@@ -16,57 +16,57 @@
   margin: 0 auto;
   h2 {
     text-align: left;
-    margin-top: 25px;
     font-size: 4rem;
     line-height: 4.25rem;
+    margin-top: 25px;
     span {
       font-size: 3rem;
     }
   }
   p {
-    margin: 4rem 0 6rem 0;
     font-size: 2rem;
+    margin: 4rem 0 6rem 0;
   }
 }
 
 .about-form-container h4 {
-  font-size: 3rem;
   text-align: center;
+  font-size: 3rem;
   margin-bottom: 25px;
 }
 
 .about-form {
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
-  position: relative;
   .form-field {
     display: flex;
     flex-direction: column;
     label {
-      font-weight: 700;
-      font-size: 1rem;
       letter-spacing: 0.5rem;
       text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1rem;
       color: $primarycolor;
     }
   }
   button {
+    width: 100%;
     font-family: $fontText;
     font-size: 1.3rem;
     color: $primarycolor;
-    border: none;
-    border-radius: 3px;
     background-color: $liteAccent;
     padding: 10px 10px;
     margin-top: 20px;
-    width: 100%;
+    border: none;
+    border-radius: 3px;
     &:hover {
       background-color: $accent;
       border: none;
     }
     &:focus {
-      background-color: $primarycolor;
       color: $liteAccent;
+      background-color: $primarycolor;
       border: none;
     }
   }
@@ -74,15 +74,15 @@
 
 input,
 #form-message {
-  border: $accent 1px solid;
-  border-radius: 3px;
   height: 35px;
-  padding: 5px 10px;
   font-size: 1.3rem;
   font-family: $fontText;
+  border: $accent 1px solid;
+  border-radius: 3px;
+  padding: 5px 10px;
   &::placeholder {
-    color: $accent;
     font-style: italic;
+    color: $accent;
   }
   &:focus {
     border: $primarycolor 2px solid;
@@ -97,19 +97,19 @@ input,
 }
 
 .form-thank-when-clicked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  transition: 0.5s ease;
   background-color: $liteAccent;
   padding: 30px;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: 0.5s ease;
 }
 
 .form-thank-text {
@@ -118,9 +118,9 @@ input,
 
 .form-thank-text-when-clicked {
   display: block;
-  color: black;
   font-size: 1.5rem;
   line-height: 2rem;
+  color: black;
 }
 
 @media only screen and (min-width: 1024px) {

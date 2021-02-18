@@ -8,7 +8,7 @@ const About = () => {
     <>
       <Layout>
         <SEO title="About Me" />
-        <div class="about-text">
+        <div className="about-text">
           <img
             id="profile-pic"
             src="https://res.cloudinary.com/kndshein/image/upload/c_crop,g_north,h_867,w_734/v1609575414/Project%20One/About/IMG_0469_tdsdwo.jpg"
@@ -35,12 +35,12 @@ const About = () => {
             not actually playing them.
           </p>
         </div>
-        <div class="about-form-container">
+        <div className="about-form-container">
           <h4>The world's burning, let's connect!</h4>
-          <div class="about-form">
-            <form name="submit-to-google-sheet" autocomplete="off">
-              <div class="form-field">
-                <label for="form-name">Name</label>
+          <div className="about-form">
+            <form name="submit-to-google-sheet" autoComplete="off">
+              <div className="form-field">
+                <label htmlFor="form-name">Name</label>
                 <input
                   id="form-name"
                   name="Name"
@@ -49,8 +49,8 @@ const About = () => {
                   required
                 />
               </div>
-              <div class="form-field">
-                <label for="form-email">Email</label>
+              <div className="form-field">
+                <label htmlFor="form-email">Email</label>
                 <input
                   id="form-email"
                   name="Email"
@@ -59,8 +59,8 @@ const About = () => {
                   required
                 />
               </div>
-              <div class="form-field">
-                <label for="form-message">Message</label>
+              <div className="form-field">
+                <label htmlFor="form-message">Message</label>
                 <textarea
                   id="form-message"
                   name="Message"
@@ -71,13 +71,13 @@ const About = () => {
               <button
                 id="about-form-button"
                 type="submit"
-                onclick="this.blur();"
+                // onClick="this.blur();"
               >
                 Submit
               </button>
             </form>
-            <div id="form-thank" class="form-thank">
-              <div id="form-thank-text" class="form-thank-text">
+            <div id="form-thank" className="form-thank">
+              <div id="form-thank-text" className="form-thank-text">
                 Thanks for reaching out! I'll get back to you in a jiffy.
               </div>
             </div>

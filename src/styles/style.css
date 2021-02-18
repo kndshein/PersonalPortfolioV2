@@ -244,17 +244,17 @@ a:focus {
 }
 
 #profile-pic {
-  border-radius: 50%;
+  display: block;
   width: calc(min(15vw, 250px));
   min-width: 200px;
   height: calc(min(15vw, 250px));
   min-height: 200px;
-  display: block;
   margin: 0 auto 3vw auto;
   margin-top: calc(max(2vw, 50px));
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #555555;
+  border-radius: 50%;
 }
 
 .about-text {
@@ -264,9 +264,9 @@ a:focus {
 
 .about-text h2 {
   text-align: left;
-  margin-top: 25px;
   font-size: 4rem;
   line-height: 4.25rem;
+  margin-top: 25px;
 }
 
 .about-text h2 span {
@@ -274,20 +274,20 @@ a:focus {
 }
 
 .about-text p {
-  margin: 4rem 0 6rem 0;
   font-size: 2rem;
+  margin: 4rem 0 6rem 0;
 }
 
 .about-form-container h4 {
-  font-size: 3rem;
   text-align: center;
+  font-size: 3rem;
   margin-bottom: 25px;
 }
 
 .about-form {
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
-  position: relative;
 }
 
 .about-form .form-field {
@@ -301,23 +301,23 @@ a:focus {
 }
 
 .about-form .form-field label {
-  font-weight: 700;
-  font-size: 1rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
   color: #555555;
 }
 
 .about-form button {
+  width: 100%;
   font-family: proxima-nova, sans-serif;
   font-size: 1.3rem;
   color: #555555;
-  border: none;
-  border-radius: 3px;
   background-color: #eeeeee;
   padding: 10px 10px;
   margin-top: 20px;
-  width: 100%;
+  border: none;
+  border-radius: 3px;
 }
 
 .about-form button:hover {
@@ -326,43 +326,43 @@ a:focus {
 }
 
 .about-form button:focus {
-  background-color: #555555;
   color: #eeeeee;
+  background-color: #555555;
   border: none;
 }
 
 input,
 #form-message {
-  border: #aaaaaa 1px solid;
-  border-radius: 3px;
   height: 35px;
-  padding: 5px 10px;
   font-size: 1.3rem;
   font-family: proxima-nova, sans-serif;
+  border: #aaaaaa 1px solid;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 
 input::-webkit-input-placeholder,
 #form-message::-webkit-input-placeholder {
-  color: #aaaaaa;
   font-style: italic;
+  color: #aaaaaa;
 }
 
 input:-ms-input-placeholder,
 #form-message:-ms-input-placeholder {
-  color: #aaaaaa;
   font-style: italic;
+  color: #aaaaaa;
 }
 
 input::-ms-input-placeholder,
 #form-message::-ms-input-placeholder {
-  color: #aaaaaa;
   font-style: italic;
+  color: #aaaaaa;
 }
 
 input::placeholder,
 #form-message::placeholder {
-  color: #aaaaaa;
   font-style: italic;
+  color: #aaaaaa;
 }
 
 input:focus,
@@ -378,17 +378,6 @@ input:focus,
 }
 
 .form-thank-when-clicked {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  background-color: #eeeeee;
-  padding: 30px;
-  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,6 +387,17 @@ input:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .form-thank-text {
@@ -406,9 +406,9 @@ input:focus,
 
 .form-thank-text-when-clicked {
   display: block;
-  color: black;
   font-size: 1.5rem;
   line-height: 2rem;
+  color: black;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -450,7 +450,7 @@ input:focus,
 }
 
 .footer {
-  margin-top: 75px;
+  margin-top: 100px;
   width: 100%;
 }
 

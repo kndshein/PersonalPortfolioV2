@@ -8,7 +8,7 @@ import SEO from "../components/seo";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div class="landing-text">
+    <div className="landing-text">
       <h1>
         Yello! My name is Kaung, <span>pronounced like King </span>
         <span>Kong.</span>
