@@ -1,5 +1,5 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from "react";
+import Link from "gatsby-link";
 
 export default function Navbar() {
   return (
@@ -45,5 +45,5 @@ export default function Navbar() {
         </nav>
       </div>
     </>
-  )
+  );
 }
