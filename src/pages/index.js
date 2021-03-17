@@ -1,34 +1,35 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-// import Image from "../components/image";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
-  <Layout>
+const HomePage = () => (
+  <>
     <SEO title="Home" />
-    <div className="landing-text">
-      <h1>
-        Yello! My name is Kaung, <span>pronounced like King </span>
-        <span>Kong.</span>
-      </h1>
-      <p>
-        Front-End Developer
-        <br />
-        Graphic Designer
-        <br />
-        Avid Gamer
-        <br />
-        Photographer
-        <br />
-        Keyboard Enthusiast
-      </p>
-      <Link to="/about" id="more-about-me">
-        More About Me
-      </Link>
+    <div className="homepage-container">
+      <div className="links-container">
+        <div className="logo-container">
+          <div className="logo-content">Kaung Nan Dar Shein</div>
+        </div>
+        <div className="links">
+          <div className="code">
+            <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+          </div>
+          <div className="snap">
+            <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+          </div>
+          <div className="design">
+            <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+          </div>
+          <div className="about">
+            <Link to="/about">
+              <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
-  </Layout>
+  </>
 );
 
-export default IndexPage;
+export default HomePage;

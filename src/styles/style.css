@@ -23,7 +23,6 @@ body {
   font-weight: 300;
   font-style: normal;
   line-height: 2.75rem;
-  padding: 100px 20px 20px 20px;
   margin: auto;
   -webkit-animation: fadeInAnimation ease-in-out 0.3s;
           animation: fadeInAnimation ease-in-out 0.3s;
@@ -206,35 +205,90 @@ a:focus {
   }
 }
 
-.landing-text {
-  margin-top: calc(max(5vw, 50px));
+.homepage-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.landing-text h1 {
-  font-size: calc(min(15vw, 100px));
-  line-height: calc(min(15vw, 100px));
+.homepage-container .links-container {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  padding: 35px 25px 25px 25px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 
-.landing-text h1 span {
-  font-size: inherit;
-  color: #aaaaaa;
+.homepage-container .links-container .logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-.landing-text h1 span:nth-of-type(2) {
-  font-style: italic;
+.homepage-container .links-container .logo-container:before, .homepage-container .links-container .logo-container:after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 0px;
+          flex: 2 0 0;
+  height: 1px;
+  border-top: 2px solid black;
 }
 
-.landing-text p {
-  font-size: 2rem;
-  margin-top: calc(min(10vw, 50px));
-  margin-bottom: calc(min(8vw, 50px));
-}
-
-#more-about-me {
+.homepage-container .links-container .logo-container .logo-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  height: 26px;
+  font-size: 3vw;
+  font-family: bebas-neue-pro-semiexpanded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.homepage-container .links-container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.homepage-container .links-container .links div {
+  height: 100%;
+  width: 23%;
+  overflow: hidden;
+}
+
+.homepage-container .links-container .links div img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (min-width: 1024px) {
