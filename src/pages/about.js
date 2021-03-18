@@ -15,9 +15,10 @@ const AboutPage = () => {
             alt="Selfie of Kaung"
           />
           <h2>
-            My name is Kaung Nan Dar Shein.
+            Yello! My name is Kaung,
             <br />
-            You can call me Kaung <span>(/'kɒŋ/)</span>.
+            <span>pronounced like King </span>
+            <span>Kong.</span>
           </h2>
           <p>
             I am a graphic designer and an aspiring software engineer with a

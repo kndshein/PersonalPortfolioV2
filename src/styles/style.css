@@ -396,7 +396,7 @@ a:focus {
   .homepage-container .links-container .links .snap,
   .homepage-container .links-container .links .design,
   .homepage-container .links-container .links .about {
-    height: 22%;
+    height: 23%;
     width: 100%;
   }
 }
@@ -416,7 +416,7 @@ a:focus {
 }
 
 .about-text {
-  max-width: 800px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -428,7 +428,8 @@ a:focus {
 }
 
 .about-text h2 span {
-  font-size: 3rem;
+  font-size: 4rem;
+  color: #aaaaaa;
 }
 
 .about-text p {
