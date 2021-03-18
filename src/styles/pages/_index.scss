@@ -12,9 +12,9 @@
     height: 60%;
     width: 100%;
     padding: 35px 25px 25px 25px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid $primaryColor;
+    border-bottom: 2px solid $primaryColor;
+    border-right: 2px solid $primaryColor;
 
     .logo-container {
       position: absolute;
@@ -30,7 +30,7 @@
         display: block;
         flex: 2 0 0;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid $primaryColor;
       }
 
       .logo-content {

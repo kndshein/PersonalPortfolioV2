@@ -1,14 +1,18 @@
 @import url("https://use.typekit.net/hoh1goc.css");
 
 // Colors
-$primarycolor: #555555;
-$secondarycolor: white;
+$primaryColor: black;
+$secondaryColor: white;
 $liteAccent: #eeeeee;
 $accent: #aaaaaa;
+$darkAccent: #555555;
 
 // Fonts
 $fontTitle: bebas-neue-pro-semiexpanded, sans-serif;
 $fontText: roboto, sans-serif;
+
+// Sizes
+$viewSize: 1200px;
 
 * {
   font-size: 12px;
@@ -47,7 +51,7 @@ a {
     color: $accent;
   }
   &:focus {
-    color: $primarycolor;
+    color: $primaryColor;
   }
 }
 
