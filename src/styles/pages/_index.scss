@@ -62,14 +62,16 @@
 
         .link-title {
           font-size: 20px;
+          margin-bottom: 5px;
         }
 
         .link-hover {
-          visibility: hidden;
-          line-height: calc(max(2vw, 2rem));
+          display: none;
+          line-height: calc(max(2vw, 1.5rem));
+
           span {
-            font-size: calc(max(2.5vw, 3rem));
             font-weight: 300;
+            font-size: calc(max(1.5vw, 2rem));
             overflow-wrap: break-word;
 
             &:nth-child(2n) {
@@ -86,7 +88,7 @@
 
         &:hover {
           .link-hover {
-            visibility: visible;
+            display: block;
           }
         }
       }

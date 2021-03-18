@@ -5,9 +5,13 @@ import SEO from "../components/seo";
 
 const HomePage = () => {
   var num = [],
+    num2 = [],
     i = 0,
-    len = 30;
+    j = 0,
+    len = 60,
+    len2 = 100;
   while (++i <= len) num.push(i);
+  while (++j <= len2) num2.push(i);
 
   return (
     <>
@@ -34,7 +38,7 @@ const HomePage = () => {
                 <div className="link-title">I snap.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>CODE</span>;
+                    return <span>SNAP</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
@@ -45,7 +49,7 @@ const HomePage = () => {
                 <div className="link-title">I design.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>CODE</span>;
+                    return <span>DESIGN</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
@@ -55,8 +59,8 @@ const HomePage = () => {
               <Link to="/about">
                 <div className="link-title">I am.</div>
                 <div className="link-hover">
-                  {num.map((x, index) => {
-                    return <span>CODE</span>;
+                  {num2.map((x, index) => {
+                    return <span>AM</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />

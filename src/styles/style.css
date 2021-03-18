@@ -285,22 +285,23 @@ a {
 .homepage-container .links-container .links .design .link-title,
 .homepage-container .links-container .links .about .link-title {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .homepage-container .links-container .links .code .link-hover,
 .homepage-container .links-container .links .snap .link-hover,
 .homepage-container .links-container .links .design .link-hover,
 .homepage-container .links-container .links .about .link-hover {
-  visibility: hidden;
-  line-height: calc(max(2vw, 2rem));
+  display: none;
+  line-height: calc(max(2vw, 1.5rem));
 }
 
 .homepage-container .links-container .links .code .link-hover span,
 .homepage-container .links-container .links .snap .link-hover span,
 .homepage-container .links-container .links .design .link-hover span,
 .homepage-container .links-container .links .about .link-hover span {
-  font-size: calc(max(2.5vw, 3rem));
   font-weight: 300;
+  font-size: calc(max(1.5vw, 2rem));
   overflow-wrap: break-word;
 }
 
@@ -325,7 +326,7 @@ a {
 .homepage-container .links-container .links .snap:hover .link-hover,
 .homepage-container .links-container .links .design:hover .link-hover,
 .homepage-container .links-container .links .about:hover .link-hover {
-  visibility: visible;
+  display: block;
 }
 
 @media only screen and (max-width: 425px) {
