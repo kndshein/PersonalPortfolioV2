@@ -37,14 +37,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #aaaaaa;
-}
-
-a:focus {
-  color: #555555;
-}
-
 #logo,
 #logo-alt {
   font-family: bebas-neue, sans-serif;
@@ -243,7 +235,7 @@ a:focus {
   width: 100%;
 }
 
-.homepage-container .links-container .logo-container:before, .homepage-container .links-container .logo-container:after {
+.homepage-container .links-container .logo-container::before, .homepage-container .links-container .logo-container::after {
   content: "";
   display: block;
   -webkit-box-flex: 2;
@@ -279,17 +271,61 @@ a:focus {
   height: 100%;
 }
 
-.homepage-container .links-container .links div {
+.homepage-container .links-container .links .code,
+.homepage-container .links-container .links .snap,
+.homepage-container .links-container .links .design,
+.homepage-container .links-container .links .about {
   height: 100%;
   width: 23%;
   overflow: hidden;
 }
 
-.homepage-container .links-container .links div img {
+.homepage-container .links-container .links .code .link-title,
+.homepage-container .links-container .links .snap .link-title,
+.homepage-container .links-container .links .design .link-title,
+.homepage-container .links-container .links .about .link-title {
+  font-size: 20px;
+}
+
+.homepage-container .links-container .links .code .link-hover,
+.homepage-container .links-container .links .snap .link-hover,
+.homepage-container .links-container .links .design .link-hover,
+.homepage-container .links-container .links .about .link-hover {
+  visibility: hidden;
+  line-height: calc(max(2vw, 2rem));
+}
+
+.homepage-container .links-container .links .code .link-hover span,
+.homepage-container .links-container .links .snap .link-hover span,
+.homepage-container .links-container .links .design .link-hover span,
+.homepage-container .links-container .links .about .link-hover span {
+  font-size: calc(max(2.5vw, 3rem));
+  font-weight: 300;
+  overflow-wrap: break-word;
+}
+
+.homepage-container .links-container .links .code .link-hover span:nth-child(2n),
+.homepage-container .links-container .links .snap .link-hover span:nth-child(2n),
+.homepage-container .links-container .links .design .link-hover span:nth-child(2n),
+.homepage-container .links-container .links .about .link-hover span:nth-child(2n) {
+  font-weight: 500;
+}
+
+.homepage-container .links-container .links .code img,
+.homepage-container .links-container .links .snap img,
+.homepage-container .links-container .links .design img,
+.homepage-container .links-container .links .about img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.homepage-container .links-container .links .code:hover .link-hover,
+.homepage-container .links-container .links .snap:hover .link-hover,
+.homepage-container .links-container .links .design:hover .link-hover,
+.homepage-container .links-container .links .about:hover .link-hover {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 425px) {
@@ -314,7 +350,10 @@ a:focus {
         -ms-flex-flow: column;
             flex-flow: column;
   }
-  .homepage-container .links-container .links div {
+  .homepage-container .links-container .links .code,
+  .homepage-container .links-container .links .snap,
+  .homepage-container .links-container .links .design,
+  .homepage-container .links-container .links .about {
     height: 22%;
     width: 100%;
   }

@@ -23,8 +23,8 @@
       justify-content: center;
       width: 100%;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         content: "";
         display: block;
         flex: 2 0 0;
@@ -52,15 +52,42 @@
       justify-content: space-between;
       height: 100%;
 
-      div {
+      .code,
+      .snap,
+      .design,
+      .about {
         height: 100%;
         width: 23%;
         overflow: hidden;
+
+        .link-title {
+          font-size: 20px;
+        }
+
+        .link-hover {
+          visibility: hidden;
+          line-height: calc(max(2vw, 2rem));
+          span {
+            font-size: calc(max(2.5vw, 3rem));
+            font-weight: 300;
+            overflow-wrap: break-word;
+
+            &:nth-child(2n) {
+              font-weight: 500;
+            }
+          }
+        }
 
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
+        }
+
+        &:hover {
+          .link-hover {
+            visibility: visible;
+          }
         }
       }
     }
@@ -87,7 +114,10 @@
       .links {
         flex-flow: column;
 
-        div {
+        .code,
+        .snap,
+        .design,
+        .about {
           height: 22%;
           width: 100%;
         }
