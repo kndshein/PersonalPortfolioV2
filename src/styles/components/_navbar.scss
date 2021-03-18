@@ -2,8 +2,10 @@
 
 #logo,
 #logo-alt {
-  font-family: bebas-neue, sans-serif;
+  font-family: $fontTitle;
+  font-weight: 600;
   font-size: 3.5rem;
+  text-transform: uppercase;
 }
 
 #logo {
@@ -16,6 +18,7 @@
   top: 0;
   left: 0;
   width: 100%;
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -23,6 +26,7 @@
     max-width: 1200px;
     padding: 20px 20px;
     margin: 0 auto;
+
     #mobile-nav {
       position: relative;
       display: flex;
@@ -30,6 +34,7 @@
       align-items: center;
       width: 33px;
       height: 33px;
+
       .menu-button {
         z-index: 11;
         position: relative;
@@ -40,12 +45,14 @@
         height: 25px;
         cursor: pointer;
         transition: all 750ms ease-in-out;
+
         .menu-button-burger {
           width: 20px;
           height: 4px;
           background: black;
           border-radius: 2px;
           transition: all 750ms ease-in-out;
+
           &::before,
           &::after {
             content: "";
@@ -56,15 +63,18 @@
             border-radius: 2px;
             transition: all 750ms ease-in-out;
           }
+
           &::before {
             transform: translateY(-7px);
           }
+
           &::after {
             transform: translateY(7px);
           }
         }
       }
     }
+
     .navbar-links {
       display: none;
     }
@@ -75,10 +85,12 @@
   .menu-button-burger {
     transform: translateX(10px);
     background: transparent;
+
     &::before {
       transform: rotate(45deg) translate(-9px, 9px);
       width: 20px;
     }
+
     &::after {
       transform: rotate(-45deg) translate(-9px, -9px);
       width: 20px;
