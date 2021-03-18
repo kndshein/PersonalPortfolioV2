@@ -36,6 +36,9 @@ export default function Navbar() {
               <Link to="/code">I code</Link>
             </li>
             <li>
+              <Link to="/design">I design</Link>
+            </li>
+            <li>
               <Link to="/snap">I snap</Link>
             </li>
             <li>

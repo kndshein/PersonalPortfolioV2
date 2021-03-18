@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import ReactFitText from "react-fittext";
 
 import SEO from "../components/seo";
 
@@ -24,7 +23,7 @@ const HomePage = () => {
           </div>
           <div className="links">
             <div className="code">
-              <Link to="/about">
+              <Link to="/code">
                 <div className="link-title">I code.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
@@ -35,22 +34,22 @@ const HomePage = () => {
               </Link>
             </div>
             <div className="snap">
-              <Link to="/snap">
-                <div className="link-title">I snap.</div>
+              <Link to="/design">
+                <div className="link-title">I design.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>SNAP</span>;
+                    return <span>DESIGN</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
               </Link>
             </div>
             <div className="design">
-              <Link to="/about">
-                <div className="link-title">I design.</div>
+              <Link to="/snap">
+                <div className="link-title">I snap.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>DESIGN</span>;
+                    return <span>SNAP</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
