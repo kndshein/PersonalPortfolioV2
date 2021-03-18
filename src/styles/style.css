@@ -37,6 +37,14 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #aaaaaa;
+}
+
+a:focus {
+  color: #555555;
+}
+
 #logo,
 #logo-alt {
   font-family: bebas-neue, sans-serif;
@@ -201,15 +209,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: 0 auto;
   height: 100vh;
-  width: 80%;
+  width: 90%;
 }
 
 .homepage-container .links-container {
@@ -280,11 +292,19 @@ a {
   overflow: hidden;
 }
 
+.homepage-container .links-container .links .code a,
+.homepage-container .links-container .links .snap a,
+.homepage-container .links-container .links .design a,
+.homepage-container .links-container .links .about a {
+  color: black;
+}
+
 .homepage-container .links-container .links .code .link-title,
 .homepage-container .links-container .links .snap .link-title,
 .homepage-container .links-container .links .design .link-title,
 .homepage-container .links-container .links .about .link-title {
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 1.75rem;
   margin-bottom: 5px;
 }
 
@@ -293,6 +313,8 @@ a {
 .homepage-container .links-container .links .design .link-hover,
 .homepage-container .links-container .links .about .link-hover {
   display: none;
+  height: 100%;
+  word-wrap: break-word;
   line-height: calc(max(2vw, 1.5rem));
 }
 
@@ -301,15 +323,14 @@ a {
 .homepage-container .links-container .links .design .link-hover span,
 .homepage-container .links-container .links .about .link-hover span {
   font-weight: 300;
-  font-size: calc(max(1.5vw, 2rem));
-  overflow-wrap: break-word;
+  font-size: calc(max(1.75vw, 2rem));
 }
 
 .homepage-container .links-container .links .code .link-hover span:nth-child(2n),
 .homepage-container .links-container .links .snap .link-hover span:nth-child(2n),
 .homepage-container .links-container .links .design .link-hover span:nth-child(2n),
 .homepage-container .links-container .links .about .link-hover span:nth-child(2n) {
-  font-weight: 500;
+  color: #aaaaaa;
 }
 
 .homepage-container .links-container .links .code img,
@@ -329,16 +350,36 @@ a {
   display: block;
 }
 
-@media only screen and (max-width: 425px) {
+.homepage-container .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.homepage-container .social-links ul li {
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.homepage-container .social-links ul li a {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 500px) {
   .homepage-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
     width: 100%;
-    padding: 30px 20px 20px 20px;
+    padding: 10px 20px 0 20px;
   }
   .homepage-container .links-container {
-    height: 100%;
+    height: 90%;
     width: 100%;
     margin-top: 20px;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import ReactFitText from "react-fittext";
 
 import SEO from "../components/seo";
 
@@ -8,8 +9,8 @@ const HomePage = () => {
     num2 = [],
     i = 0,
     j = 0,
-    len = 60,
-    len2 = 100;
+    len = 75,
+    len2 = 120;
   while (++i <= len) num.push(i);
   while (++j <= len2) num2.push(i);
 
@@ -34,7 +35,7 @@ const HomePage = () => {
               </Link>
             </div>
             <div className="snap">
-              <Link to="/about">
+              <Link to="/snap">
                 <div className="link-title">I snap.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
@@ -67,6 +68,37 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="social-links">
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/durian.puberty/"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/kndshein/"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://medium.com/@kndshein"
+              >
+                Medium
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </>
