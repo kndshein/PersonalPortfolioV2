@@ -5,71 +5,80 @@
   height: calc(min(15vw, 250px));
   min-height: 200px;
   margin: 0 auto 3vw auto;
-  margin-top: calc(max(2vw, 50px));
+  margin-top: calc(max(8vw, 100px));
   object-fit: cover;
   border: 1px solid $primaryColor;
   border-radius: 50%;
 }
+.about-page {
+  width: 100%;
 
-.about-text {
-  width: 90%;
-  margin: 0 auto;
-  h2 {
-    text-align: left;
-    font-size: 4rem;
-    line-height: 4.25rem;
-    margin-top: 25px;
-    span {
-      font-size: 4rem;
-      color: $accent;
+  .about-text {
+    h2 {
+      text-align: left;
+      font-size: calc(max(4vw, 4rem));
+      line-height: calc(max(4vw, 4.25rem));
+      margin-top: 25px;
+
+      span {
+        font-size: calc(max(4vw, 4.25rem));
+        color: $accent;
+
+        &:nth-of-type(2) {
+          font-style: oblique;
+        }
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: calc(max(1.5vw, 1.5rem));
+      line-height: calc(max(2vw, 2rem));
+      margin: 4rem 0 6rem 0;
     }
   }
-  p {
-    font-weight: 300;
-    font-size: 2rem;
-    margin: 4rem 0 6rem 0;
+
+  .about-form-container h4 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 25px;
   }
-}
 
-.about-form-container h4 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 25px;
-}
+  .about-form {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
 
-.about-form {
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    label {
-      letter-spacing: 0.5rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1rem;
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      label {
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $primaryColor;
+      }
+    }
+    button {
+      width: 100%;
+      font-family: $fontText;
+      font-size: 1.3rem;
       color: $primaryColor;
-    }
-  }
-  button {
-    width: 100%;
-    font-family: $fontText;
-    font-size: 1.3rem;
-    color: $primaryColor;
-    background-color: $liteAccent;
-    padding: 10px 10px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 3px;
-    &:hover {
-      background-color: $accent;
+      background-color: $liteAccent;
+      padding: 10px 10px;
+      margin-top: 20px;
       border: none;
-    }
-    &:focus {
-      color: $liteAccent;
-      background-color: $primaryColor;
-      border: none;
+      border-radius: 3px;
+      &:hover {
+        background-color: $accent;
+        border: none;
+      }
+      &:focus {
+        color: $liteAccent;
+        background-color: $primaryColor;
+        border: none;
+      }
     }
   }
 }
@@ -125,11 +134,17 @@ input,
   color: black;
 }
 
-@media only screen and (min-width: 1024px) {
-  .about-text h2 {
-    text-align: center;
+@media only screen and (min-width: 768px) {
+  .about-page {
+    .about-text {
+      h2 {
+        text-align: center;
+      }
+    }
   }
+}
 
+@media only screen and (min-width: 1024px) {
   .about-form form {
     display: grid;
     grid-template-columns: repeat(3, auto);
