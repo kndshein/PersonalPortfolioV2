@@ -19,7 +19,9 @@ const HomePage = () => {
       <div className="homepage-container">
         <div className="links-container">
           <div className="logo-container">
-            <div className="logo-content">Kaung Nan Dar Shein</div>
+            <Link to="/" className="logo-content">
+              Kaung Nan Dar Shein
+            </Link>
           </div>
           <div className="links">
             <div className="code">

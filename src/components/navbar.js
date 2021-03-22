@@ -22,9 +22,6 @@ export default function Navbar() {
           <Link to="/" id="logo">
             Kaung Nan Dar Shein
           </Link>
-          <Link to="/" id="logo-alt">
-            KNDS
-          </Link>
           <div id="mobile-nav">
             <div className="menu-button">
               <div className="menu-button-burger"></div>

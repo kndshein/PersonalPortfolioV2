@@ -1,11 +1,15 @@
 .homepage-container {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-end;
+  padding: 20px;
   margin: 0 auto;
   height: 100vh;
-  width: 90%;
+  width: 100%;
 
   .links-container {
     position: relative;
@@ -36,7 +40,7 @@
       .logo-content {
         flex: 0 0 1;
         height: 26px;
-        font-size: calc(max(3vw, 2.5rem));
+        font-size: $logoFontSize;
         font-family: $fontTitle;
         font-weight: 700;
         font-style: normal;
@@ -125,7 +129,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     width: 100%;
-    padding: 10px 20px 0 20px;
+    padding: 20px 20px 0 20px;
 
     .links-container {
       height: 90%;
@@ -134,7 +138,7 @@
 
       .logo-container {
         .logo-content {
-          font-size: 2rem;
+          font-size: $logoFontSize;
         }
       }
 

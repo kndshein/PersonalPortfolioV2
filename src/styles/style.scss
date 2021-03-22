@@ -12,7 +12,8 @@ $fontTitle: bebas-neue-pro-semiexpanded, sans-serif;
 $fontText: roboto, sans-serif;
 
 // Sizes
-$viewSize: 1200px;
+$viewSize: 1000px;
+$logoFontSize: calc(max(2.5vw, 2.5rem));
 
 * {
   font-size: 12px;
@@ -33,6 +34,7 @@ h6 {
 }
 
 body {
+  position: relative;
   font-family: $fontText;
   font-weight: 400;
   font-style: normal;
@@ -62,6 +64,6 @@ a {
 
 @media only screen and (min-width: 1024px) {
   body {
-    max-width: 1200px;
+    max-width: $viewSize;
   }
 }
