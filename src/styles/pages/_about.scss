@@ -5,11 +5,12 @@
   height: calc(min(15vw, 250px));
   min-height: 200px;
   margin: 0 auto 3vw auto;
-  margin-top: calc(max(8vw, 100px));
+  // margin-top: calc(max(8vw, 100px));
   object-fit: cover;
   border: 1px solid $primaryColor;
   border-radius: 50%;
 }
+
 .about-page {
   width: 100%;
 
