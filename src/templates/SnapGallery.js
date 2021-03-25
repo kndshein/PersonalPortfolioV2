@@ -13,9 +13,9 @@ const SnapGallery = ({ data }) => {
         <div className="snap-gallery">
           {data.gallery.images.map((image, index) => {
             return (
-              <div key={index}>
-                <GatsbyImage
-                  image={image.gatsbyImageData}
+              <div className="image-container" key={index}>
+                <img
+                  src={image.gatsbyImageData.images.fallback.src}
                   alt={image.description}
                 />
               </div>
