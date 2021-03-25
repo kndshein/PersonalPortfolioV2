@@ -112,8 +112,10 @@
     justify-content: space-between;
     align-items: center;
 
-    .brand {
-      font-size: 1.5rem;
+    div {
+      span {
+        font-size: 1.5rem;
+      }
     }
 
     ul {

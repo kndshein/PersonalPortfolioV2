@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-// import { GrInstagram, GrMedium, GrLinkedin } from "react-icons/gr";
-// import { FaLinkedinIn } from "react-icons/fa";
-// import { RiInstagramFill } from "react-icons/ri";
-// import { SiMedium } from "react-icons/si";
-
+import Typist from "react-typist";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 
 import SEO from "../components/seo";
@@ -77,7 +73,21 @@ const HomePage = () => {
           </div>
         </div>
         <div className="social-links">
-          <div className="brand">Front-End Developer</div>
+          <Typist
+            avgTypingDelay={40}
+            stdTypingDelay={0}
+            cursor={{ blink: true, element: "." }}
+          >
+            <span>Front-End Developer</span>
+            <Typist.Backspace count={19} delay={800} />
+            <span>Graphic Designer</span>
+            <Typist.Backspace count={16} delay={800} />
+            <span>Chemist</span>
+            <Typist.Backspace count={7} delay={800} />
+            <span>Keyboard Enthusiast</span>
+            <Typist.Backspace count={19} delay={800} />
+            <span>Front-End Developer</span>
+          </Typist>
           <ul>
             <li>
               <a
