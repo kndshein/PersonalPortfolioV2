@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
@@ -17,18 +17,25 @@ const SnapPage = ({ data }) => {
                 (image) => image.title === gallery.node.coverImage
               );
               return (
-                <div className="card-container">
-                  <div className="flex-container">
+                <Link to={`${gallery.node.slug}`} className="card-link">
+                  <div className="card-container">
+                    <div className="cover-image-wrap">
+                      <div className="cover-image">
+                        <div className="image-container">
+                          <GatsbyImage
+                            className="image"
+                            image={image[0].gatsbyImageData}
+                            alt={image[0].description}
+                            sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1500px / 3)"
+                          />
+                        </div>
+                      </div>
+                    </div>
                     <div className="card-title" key={index}>
                       {gallery.node.galleryTitle}
                     </div>
-                    <GatsbyImage
-                      className="card-image"
-                      image={image[0].gatsbyImageData}
-                      alt={image[0].description}
-                    />
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -45,6 +52,7 @@ export const pageQuery = graphql`
     galleries: allContentfulSnapGallery {
       edges {
         node {
+          slug
           galleryTitle
           coverImage
           images {
