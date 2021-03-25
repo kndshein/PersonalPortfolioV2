@@ -10,10 +10,13 @@ $darkAccent: #555555;
 // Fonts
 $fontTitle: bebas-neue-pro-semiexpanded, sans-serif;
 $fontText: roboto, sans-serif;
-
-// Sizes
-$viewSize: 1000px;
 $logoFontSize: calc(max(2.5vw, 2.5rem));
+
+// View Sizes
+$viewSize: 1000px;
+$mobileSize: 500px;
+$tabletSize: 768px;
+$desktopSize: 1024px;
 
 * {
   font-size: 12px;
