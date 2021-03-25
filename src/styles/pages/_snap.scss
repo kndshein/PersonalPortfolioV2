@@ -11,11 +11,12 @@
       margin-right: 4%;
       width: 30.6%;
       text-decoration: none;
+      margin-bottom: 4%;
 
       &:hover {
         .card-container {
           .card-title {
-            display: flex;
+            opacity: 1;
           }
         }
       }
@@ -27,7 +28,7 @@
       .card-container {
         position: relative;
         display: block;
-        margin: 0% 0% 12%;
+        // margin: 0% 0% 12%;
 
         .cover-image-wrap {
           display: block;
@@ -88,7 +89,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          display: none;
+          display: flex;
           justify-content: center;
           align-items: center;
           height: 100%;
@@ -96,9 +97,11 @@
           text-transform: uppercase;
           font-family: $fontTitle;
           font-weight: 600;
-          font-size: max(3vw, 2.5rem);
+          font-size: max(2vw, 2.5rem);
           color: white;
           background-color: rgba(0, 0, 0, 0.8);
+          opacity: 0;
+          transition: opacity 0.2s ease-out;
         }
       }
     }
@@ -125,7 +128,7 @@
             display: flex;
             top: 85%;
             height: 15%;
-            // align-items: flex-start;
+            opacity: 1;
           }
         }
       }
