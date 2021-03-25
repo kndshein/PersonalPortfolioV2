@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
+// import { GrInstagram, GrMedium, GrLinkedin } from "react-icons/gr";
+// import { FaLinkedinIn } from "react-icons/fa";
+// import { RiInstagramFill } from "react-icons/ri";
+// import { SiMedium } from "react-icons/si";
+
+import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 
 import SEO from "../components/seo";
 
@@ -71,23 +77,24 @@ const HomePage = () => {
           </div>
         </div>
         <div className="social-links">
+          <div className="brand">Front-End Developer</div>
           <ul>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/durian.puberty/"
-              >
-                Instagram
-              </a>
-            </li>
             <li>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/kndshein/"
               >
-                LinkedIn
+                <GrLinkedinOption />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/durian.puberty/"
+              >
+                <GrInstagram />
               </a>
             </li>
             <li>
@@ -96,7 +103,7 @@ const HomePage = () => {
                 rel="noopener noreferrer"
                 href="https://medium.com/@kndshein"
               >
-                Medium
+                <GrMedium />
               </a>
             </li>
           </ul>
