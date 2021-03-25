@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
         console.log("Error with contentful data", result.errors);
       }
 
-      const snapTemplate = path.resolve("./src/templates/gallery.js");
+      const snapTemplate = path.resolve("./src/templates/SnapGallery.js");
 
       result.data.allContentfulSnapGallery.edges.forEach((gallery) => {
         createPage({

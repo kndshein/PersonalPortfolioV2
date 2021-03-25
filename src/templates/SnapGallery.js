@@ -5,12 +5,12 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Gallery = ({ data }) => {
+const SnapGallery = ({ data }) => {
   return (
     <>
       <Layout>
         <SEO title={data.gallery.galleryTitle} />
-        <div>
+        <div className="snap-gallery">
           {data.gallery.images.map((image, index) => {
             return (
               <div key={index}>
@@ -27,7 +27,7 @@ const Gallery = ({ data }) => {
   );
 };
 
-export default Gallery;
+export default SnapGallery;
 
 export const pageQuery = graphql`
   query($slug: String!) {
