@@ -25,7 +25,6 @@ const SnapPage = ({ data }) => {
                           className="image"
                           image={image[0].gatsbyImageData}
                           alt={image[0].description}
-                          sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1500px / 3)"
                         />
                       </div>
                     </div>
@@ -56,7 +55,7 @@ export const pageQuery = graphql`
           images {
             title
             description
-            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG])
+            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 75)
           }
         }
       }

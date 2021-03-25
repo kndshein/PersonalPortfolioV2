@@ -37,7 +37,7 @@ export const pageQuery = graphql`
       images {
         title
         description
-        gatsbyImageData(layout: FULL_WIDTH, formats: [JPG])
+        gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 75)
       }
     }
   }
