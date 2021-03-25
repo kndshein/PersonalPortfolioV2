@@ -7,41 +7,39 @@ import SEO from "../components/seo";
 
 const SnapPage = ({ data }) => {
   return (
-    <>
-      <Layout>
-        <SEO title="I Snap" />
-        <div className="snap-page">
-          <div className="cards-container">
-            {data.galleries.edges.map((gallery, index) => {
-              const image = gallery.node.images.filter(
-                (image) => image.title === gallery.node.coverImage
-              );
-              return (
-                <Link to={`${gallery.node.slug}`} className="card-link">
-                  <div className="card-container">
-                    <div className="cover-image-wrap">
-                      <div className="cover-image">
-                        <div className="image-container">
-                          <GatsbyImage
-                            className="image"
-                            image={image[0].gatsbyImageData}
-                            alt={image[0].description}
-                            sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1500px / 3)"
-                          />
-                        </div>
+    <Layout>
+      <SEO title="I Snap" />
+      <div className="snap-page">
+        <div className="cards-container">
+          {data.galleries.edges.map((gallery, index) => {
+            const image = gallery.node.images.filter(
+              (image) => image.title === gallery.node.coverImage
+            );
+            return (
+              <Link to={`${gallery.node.slug}`} className="card-link">
+                <div className="card-container">
+                  <div className="cover-image-wrap">
+                    <div className="cover-image">
+                      <div className="image-container">
+                        <GatsbyImage
+                          className="image"
+                          image={image[0].gatsbyImageData}
+                          alt={image[0].description}
+                          sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1500px / 3)"
+                        />
                       </div>
                     </div>
-                    <div className="card-title" key={index}>
-                      {gallery.node.galleryTitle}
-                    </div>
                   </div>
-                </Link>
-              );
-            })}
-          </div>
+                  <div className="card-title" key={index}>
+                    {gallery.node.galleryTitle}
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
-      </Layout>
-    </>
+      </div>
+    </Layout>
   );
 };
 
