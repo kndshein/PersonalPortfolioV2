@@ -7,34 +7,27 @@ import SEO from "../components/seo";
 
 const SnapGallery = ({ data }) => {
   console.log(data.gallery.images);
-  let images = [];
-  while (data.gallery.images.length > 0) {
-    let current = [];
-    current.push(data.gallery.images.shift());
-    current.push(data.gallery.images.shift());
-    images.push(current);
-  }
+  // let images = [];
+  // while (data.gallery.images.length > 0) {
+  //   let current = [];
+  //   current.push(data.gallery.images.shift());
+  //   current.push(data.gallery.images.shift());
+  //   images.push(current);
+  // }
 
   return (
     <>
       <Layout>
         <SEO title={data.gallery.galleryTitle} />
         <div className="snap-gallery">
-          {images.map((image, index) => {
+          {data.gallery.images.map((image, index) => {
             return (
-              <div className="row-container" key={index}>
-                <div className="image-container">
-                  <img
-                    src={image[0].gatsbyImageData.images.fallback.src}
-                    alt={image[0].description}
-                  />
-                </div>
-                <div className="image-container">
-                  <img
-                    src={image[1].gatsbyImageData.images.fallback.src}
-                    alt={image[1].description}
-                  />
-                </div>
+              <div className="image-container" key={index}>
+                <GatsbyImage
+                  className="poop"
+                  image={image.gatsbyImageData}
+                  alt={image.description}
+                />
               </div>
             );
           })}
