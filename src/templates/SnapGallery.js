@@ -6,20 +6,14 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const SnapGallery = ({ data }) => {
-  // console.log(data.gallery.images);
-  // let images = [];
-  // while (data.gallery.images.length > 0) {
-  //   let current = [];
-  //   current.push(data.gallery.images.shift());
-  //   current.push(data.gallery.images.shift());
-  //   images.push(current);
-  // }
-  let images = [];
-  let column = Math.floor(data.gallery.images.length / 3);
-  images.push(data.gallery.images.splice(0, column));
-  images.push(data.gallery.images.splice(0, column));
-  images.push(data.gallery.images);
-  console.log(images);
+  const [images] = React.useState([]);
+
+  React.useState(() => {
+    let column = Math.round(data.gallery.images.length / 3);
+    images.push(data.gallery.images.slice(0, column));
+    images.push(data.gallery.images.slice(column, column * 2));
+    images.push(data.gallery.images.slice(column * 2));
+  }, []);
 
   return (
     <>

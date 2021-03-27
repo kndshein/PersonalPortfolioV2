@@ -16,7 +16,11 @@ const SnapPage = ({ data }) => {
               (image) => image.title === gallery.node.coverImage
             );
             return (
-              <Link to={`${gallery.node.slug}`} className="card-link">
+              <Link
+                to={`${gallery.node.slug}`}
+                className="card-link"
+                key={index}
+              >
                 <div className="card-container">
                   <div className="cover-image-wrap">
                     <div className="cover-image">
@@ -29,9 +33,7 @@ const SnapPage = ({ data }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="card-title" key={index}>
-                    {gallery.node.galleryTitle}
-                  </div>
+                  <div className="card-title">{gallery.node.galleryTitle}</div>
                 </div>
               </Link>
             );
