@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const SnapGallery = ({ data }) => {
-  console.log(data.gallery.images);
+  // console.log(data.gallery.images);
   // let images = [];
   // while (data.gallery.images.length > 0) {
   //   let current = [];
@@ -14,20 +14,33 @@ const SnapGallery = ({ data }) => {
   //   current.push(data.gallery.images.shift());
   //   images.push(current);
   // }
+  let images = [];
+  let column = Math.floor(data.gallery.images.length / 3);
+  images.push(data.gallery.images.splice(0, column));
+  images.push(data.gallery.images.splice(0, column));
+  images.push(data.gallery.images);
+  console.log(images);
 
   return (
     <>
       <Layout>
         <SEO title={data.gallery.galleryTitle} />
         <div className="snap-gallery">
-          {data.gallery.images.map((image, index) => {
+          <div className="gallery-title">{data.gallery.galleryTitle}</div>
+          {images.map((column, columnIndex) => {
             return (
-              <div className="image-container" key={index}>
-                <GatsbyImage
-                  className="poop"
-                  image={image.gatsbyImageData}
-                  alt={image.description}
-                />
+              <div className={`column-${columnIndex + 1}`} key={columnIndex}>
+                {column.map((image, imageIndex) => {
+                  return (
+                    <div className="image-container" key={imageIndex}>
+                      <GatsbyImage
+                        className="image"
+                        image={image.gatsbyImageData}
+                        alt={image.description}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             );
           })}

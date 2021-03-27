@@ -86,6 +86,10 @@ const HomePage = () => {
             <Typist.Backspace count={7} delay={800} />
             <span>Keyboard Enthusiast</span>
             <Typist.Backspace count={19} delay={800} />
+            <span>Material Minimalist</span>
+            <Typist.Backspace count={19} delay={800} />
+            <span>Aesthetic Minimalist</span>
+            <Typist.Backspace count={20} delay={800} />
             <span>Front-End Developer</span>
           </Typist>
           <ul>
