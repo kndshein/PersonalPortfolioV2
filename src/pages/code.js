@@ -4,13 +4,16 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Modal from "../components/modal";
 
-const codePage = ({ data }) => {
-  console.log(data);
+const CodePage = ({ data }) => {
+  const [showModal, setShowModal] = React.useState(false);
+
   return (
     <Layout>
       <SEO title="I Code" />
       <div className="code-page">
+        <Modal cardData={data.projects.edges[0].node} />
         <div className="cards-container">
           {data.projects.edges.map((project, index) => {
             return (
@@ -33,7 +36,7 @@ const codePage = ({ data }) => {
   );
 };
 
-export default codePage;
+export default CodePage;
 
 export const pageQuery = graphql`
   query {
@@ -45,7 +48,11 @@ export const pageQuery = graphql`
             gatsbyImageData
             description
           }
-          preview
+          preview {
+            file {
+              url
+            }
+          }
           description
           features: childContentfulCodeGalleryFeaturesJsonNode {
             Features

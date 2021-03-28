@@ -2,16 +2,13 @@ $codeTextHeight: 15%;
 
 .code-page {
   .cards-container {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: min(10vw, 50px);
 
     .card-container {
       position: relative;
-      display: flex;
-      flex-direction: column;
       height: 300px;
-      width: 300px;
       outline: 1px solid black;
 
       .card-title {
