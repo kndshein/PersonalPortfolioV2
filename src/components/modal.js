@@ -1,7 +1,7 @@
 import React from "react";
 
 const Modal = ({ cardData }) => {
-  console.log(cardData.test);
+  console.log(cardData);
   return (
     <div className="modal">
       <div className="card-container">
@@ -28,6 +28,24 @@ const Modal = ({ cardData }) => {
                 return <span key={index}>{technology}</span>;
               })}
             </div>
+          </div>
+          <div className="links">
+            <a
+              className="live-link"
+              href={cardData.links.Livelink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Website
+            </a>
+            <a
+              className="github-link"
+              href={cardData.links.GitHub}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
           </div>
         </div>
       </div>
