@@ -1,0 +1,65 @@
+$codeTextHeight: 15%;
+
+.code-page {
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    .card-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      width: 300px;
+      outline: 1px solid black;
+
+      .card-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $codeTextHeight;
+        text-transform: uppercase;
+        font-family: $fontTitle;
+        font-weight: 400;
+        font-style: normal;
+        font-size: max(1.5vw, 2rem);
+      }
+
+      .card-image {
+        position: absolute;
+        top: $codeTextHeight;
+        left: 0;
+        width: 100%;
+        height: 100% - $codeTextHeight;
+
+        .image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-overlay {
+        position: absolute;
+        top: $codeTextHeight;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100% - $codeTextHeight;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      &:hover {
+        .card-overlay {
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+        }
+      }
+    }
+  }
+}

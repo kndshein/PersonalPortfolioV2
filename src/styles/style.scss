@@ -42,7 +42,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 2.75rem;
-  padding: 75px 20px 20px 20px;
+  padding: 80px 20px 20px 20px;
   margin: auto;
   animation: fadeInAnimation ease-in-out 0.3s;
   animation-iteration-count: 1;
@@ -62,8 +62,10 @@ a {
 
 @import "./components/navbar";
 @import "./pages/index";
-@import "./pages/about";
+@import "./pages/code";
 @import "./pages/snap";
+@import "./pages/about";
+
 @import "./components/footer";
 @import "./templates/snap-gallery";
 
