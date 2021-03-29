@@ -8,6 +8,7 @@ import Modal from "../components/modal";
 
 const CodePage = ({ data }) => {
   const [showModal, setShowModal] = React.useState(false);
+  // const [modalCard, setModalCard] = R
 
   const handleModal = () => {
     showModal ? setShowModal(false) : setShowModal(true);

@@ -89,8 +89,9 @@
         }
 
         .features-list {
+          margin-left: 20px;
           li {
-            list-style-type: none;
+            list-style-type: circle;
             font-family: $fontText;
             font-weight: 400;
             font-style: normal;

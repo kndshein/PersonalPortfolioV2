@@ -6,9 +6,12 @@ import SEO from "../components/seo";
 
 const NotFoundPage = () => {
   const [paragraphs] = React.useState([]);
-  for (let i = 0; i < 10; i++) {
-    paragraphs.push(jeffsum(6));
-  }
+
+  React.useEffect(() => {
+    for (let i = 0; i < 10; i++) {
+      paragraphs.push(jeffsum(6));
+    }
+  }, []);
 
   return (
     <Layout>
