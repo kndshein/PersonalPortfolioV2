@@ -1,5 +1,5 @@
 import React from "react";
-import { MdClose } from "react-icons/md";
+import { MdClose, MdOpenInNew } from "react-icons/md";
 
 const Modal = ({ cardData, showModal, handleModal }) => {
   console.log(cardData);
@@ -20,6 +20,11 @@ const Modal = ({ cardData, showModal, handleModal }) => {
               </video>
             </div>
             <div className="text-container">
+              <div className="technologies">
+                {cardData.technologies.Technologies.map((technology, index) => {
+                  return <span key={index}>{technology}</span>;
+                })}
+              </div>
               <div className="description">{cardData.description}</div>
               <div className="features">
                 <div className="features-title">Features</div>
@@ -29,16 +34,6 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                   })}
                 </ul>
               </div>
-              <div className="technologies">
-                <div className="technologies-title">Technologies</div>
-                <div className="technologies-list">
-                  {cardData.technologies.Technologies.map(
-                    (technology, index) => {
-                      return <span key={index}>{technology}</span>;
-                    }
-                  )}
-                </div>
-              </div>
               <div className="links">
                 <a
                   className="live-link"
@@ -46,7 +41,7 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit Website
+                  Visit Website <MdOpenInNew size={15} />
                 </a>
                 <a
                   className="github-link"
@@ -54,7 +49,7 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Github
+                  Github <MdOpenInNew size={15} />
                 </a>
               </div>
             </div>
