@@ -5,13 +5,14 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const NotFoundPage = () => {
-  const [paragraphs] = React.useState([]);
-
-  React.useEffect(() => {
-    for (let i = 0; i < 10; i++) {
-      paragraphs.push(jeffsum(6));
-    }
-  }, []);
+  const [paragraphs] = React.useState([
+    jeffsum(6),
+    jeffsum(6),
+    jeffsum(6),
+    jeffsum(6),
+    jeffsum(6),
+    jeffsum(6),
+  ]);
 
   return (
     <Layout>

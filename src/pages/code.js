@@ -8,16 +8,21 @@ import Modal from "../components/modal";
 
 const CodePage = ({ data }) => {
   const [showModal, setShowModal] = React.useState(false);
-  // const [modalCard, setModalCard] = R
+  const [modalCard, setModalCard] = React.useState();
 
-  const handleModal = () => {
-    showModal ? setShowModal(false) : setShowModal(true);
+  const handleModal = (index) => {
+    if (showModal) {
+      setShowModal(false);
+    } else {
+      setShowModal(true);
+      setModalCard(data.projects.edges[index].node);
+    }
   };
 
   return (
     <>
       <Modal
-        cardData={data.projects.edges[0].node}
+        cardData={modalCard}
         showModal={showModal}
         handleModal={handleModal}
       />
@@ -30,7 +35,7 @@ const CodePage = ({ data }) => {
                 <div
                   className="card-container"
                   key={index}
-                  onClick={() => handleModal()}
+                  onClick={() => handleModal(index)}
                 >
                   <div className="card-title">{project.node.title}</div>
                   <div className="card-image">
