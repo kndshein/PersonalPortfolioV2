@@ -1,12 +1,16 @@
 import React from "react";
+import { MdClose } from "react-icons/md";
 
 const Modal = ({ cardData }) => {
   console.log(cardData);
   return (
     <div className="modal">
+      <div className="close-icon">
+        <MdClose color="white" size={40} />
+      </div>
       <div className="card-container">
         <div className="preview-container">
-          <video width="700" height="500" autoPlay loop muted>
+          <video autoPlay loop muted>
             <source src={cardData.preview.file.url} type="video/mp4" />
           </video>
         </div>

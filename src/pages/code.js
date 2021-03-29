@@ -10,29 +10,31 @@ const CodePage = ({ data }) => {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
-    <Layout>
-      <SEO title="I Code" />
-      <div className="code-page">
-        <Modal cardData={data.projects.edges[0].node} />
-        <div className="cards-container">
-          {data.projects.edges.map((project, index) => {
-            return (
-              <div className="card-container" key={index}>
-                <div className="card-title">{project.node.title}</div>
-                <div className="card-image">
-                  <GatsbyImage
-                    className="image"
-                    image={project.node.image.gatsbyImageData}
-                    alt={project.node.image.description}
-                  />
+    <>
+      <Modal cardData={data.projects.edges[0].node} />
+      <Layout>
+        <SEO title="I Code" />
+        <div className="code-page">
+          <div className="cards-container">
+            {data.projects.edges.map((project, index) => {
+              return (
+                <div className="card-container" key={index}>
+                  <div className="card-title">{project.node.title}</div>
+                  <div className="card-image">
+                    <GatsbyImage
+                      className="image"
+                      image={project.node.image.gatsbyImageData}
+                      alt={project.node.image.description}
+                    />
+                  </div>
+                  <div className="card-overlay">{project.node.description}</div>
                 </div>
-                <div className="card-overlay">{project.node.description}</div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

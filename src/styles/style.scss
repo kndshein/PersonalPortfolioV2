@@ -36,8 +36,12 @@ h6 {
   line-height: 3rem;
 }
 
-body {
+html {
   position: relative;
+}
+
+body {
+  // position: relative;
   font-family: $fontText;
   font-weight: 400;
   font-style: normal;
