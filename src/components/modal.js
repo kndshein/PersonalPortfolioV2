@@ -13,13 +13,13 @@ const Modal = ({ cardData, showModal, handleModal }) => {
             <MdClose color="white" size={40} />
           </div>
           <div className="card-container">
+            <div className="title">{cardData.title}</div>
             <div className="preview-container">
               <video autoPlay loop muted>
                 <source src={cardData.preview.file.url} type="video/mp4" />
               </video>
             </div>
             <div className="text-container">
-              <div className="title">{cardData.title}</div>
               <div className="description">{cardData.description}</div>
               <div className="features">
                 <div className="features-title">Features</div>
