@@ -111,9 +111,13 @@
           font-weight: 700;
           padding: 10px;
           margin-right: 10px;
-          background-color: $darkAccent;
+          background-color: black;
           border-radius: 5px;
           color: white;
+
+          &:hover {
+            background-color: $darkAccent;
+          }
         }
 
         .github-link {
