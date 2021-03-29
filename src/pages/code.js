@@ -39,7 +39,7 @@ const CodePage = ({ data }) => {
                       alt={project.node.image.description}
                     />
                   </div>
-                  <div className="card-overlay">{project.node.description}</div>
+                  {/* <div className="card-overlay">{project.node.description}</div> */}
                 </div>
               );
             })}

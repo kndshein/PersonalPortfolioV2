@@ -10,7 +10,8 @@ $darkAccent: #555555;
 // Fonts
 $fontTitle: bebas-neue-pro, sans-serif;
 $fontText: roboto, sans-serif;
-$logoFontSize: calc(max(2vw, 2.5rem));
+$logoFontSize: clamp(3rem, 2vw, 2.5rem);
+$logoLineHeight: clamp(2.25rem, 1.75vw, 2rem);
 $fontTextFontSize: 1.75rem;
 $fontTextLineHeight: 2.5rem;
 

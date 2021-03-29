@@ -2,10 +2,11 @@
 
 #logo,
 #logo-alt {
+  text-transform: uppercase;
   font-family: $fontTitle;
   font-weight: 600;
   font-size: $logoFontSize;
-  text-transform: uppercase;
+  line-height: $logoLineHeight;
 }
 
 .navbar-container {
@@ -22,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
     max-width: $viewSize;
     padding: 20px 20px;
     margin: 0 auto;
