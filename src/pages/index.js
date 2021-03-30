@@ -81,15 +81,17 @@ const HomePage = () => {
             <span>Front-End Developer</span>
             <Typist.Backspace count={19} delay={800} />
             <span>Graphic Designer</span>
-            <Typist.Backspace count={16} delay={800} />
-            <span>Chemist</span>
-            <Typist.Backspace count={7} delay={800} />
+            <Typist.Backspace count={16} delay={500} />
+            <span>Biochemist</span>
+            <Typist.Backspace count={10} delay={800} />
             <span>Keyboard Enthusiast</span>
-            <Typist.Backspace count={19} delay={800} />
-            <span>Material Minimalist</span>
-            <Typist.Backspace count={19} delay={800} />
-            <span>Aesthetic Minimalist</span>
-            <Typist.Backspace count={20} delay={800} />
+            <Typist.Backspace count={19} delay={500} />
+            <span>Avid Gamer</span>
+            <Typist.Backspace count={10} delay={800} />
+            <span>Minimalist</span>
+            <Typist.Backspace count={10} delay={800} />
+            <span>Planted Aquarium Admirer</span>
+            <Typist.Backspace count={24} delay={500} />
             <span>Front-End Developer</span>
           </Typist>
           <ul>
