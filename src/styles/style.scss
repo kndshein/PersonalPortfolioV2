@@ -36,7 +36,7 @@ h5,
 h6 {
   font-family: $fontTitle;
   font-weight: 600;
-  line-height: 3rem;
+  // line-height: 3rem;
 }
 
 html {
@@ -70,6 +70,7 @@ a {
 @import "./pages/code";
 @import "./pages/snap";
 @import "./pages/about";
+@import "./pages/404";
 
 @import "./components/footer";
 @import "./templates/snap-gallery";

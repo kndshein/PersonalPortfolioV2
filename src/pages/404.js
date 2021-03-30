@@ -1,37 +1,24 @@
 import React from "react";
-import jeffsum from "jeffsum";
+import { FaPoop } from "react-icons/fa";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const NotFoundPage = () => {
-  const [paragraphs] = React.useState([
-    jeffsum(6),
-    jeffsum(6),
-    jeffsum(6),
-    jeffsum(6),
-    jeffsum(6),
-    jeffsum(6),
-  ]);
-
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <h1>404: Poop.</h1>
-      <h4>Something went wrong.</h4>
-      <p>
-        Since you're here, might as well read about that one time I pooped my
-        pants.
-      </p>
-      <p>
-        Oh, and here's randomly generated Jeff Goldblum text placeholder from{" "}
-        <a href="https://jeffsum.com" target="_blank" rel="noreferrer">
-          Jeffsum
-        </a>
-      </p>
-      {paragraphs.map((paragraph, index) => {
-        return <p key={index}>{paragraph}</p>;
-      })}
+      <div className="error-page">
+        <div className="title">
+          404. <FaPoop size={50} />. <div>Something went wrong.</div>
+        </div>
+        <div className="poop">
+          Since you're already here, might as well read about that one time I{" "}
+          <a href="" target="_blank" rel="noreferrer">
+            pooped my pants.
+          </a>
+        </div>
+      </div>
     </Layout>
   );
 };
