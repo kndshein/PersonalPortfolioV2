@@ -20,7 +20,9 @@ const SnapGallery = ({ data }) => {
     <Layout>
       <SEO title={data.gallery.galleryTitle} />
       <div className="snap-gallery">
-        <div className="gallery-title">{data.gallery.galleryTitle}</div>
+        <div className="gallery-title">
+          <span>SNAP :</span> {data.gallery.galleryTitle}
+        </div>
         {images.map((column, columnIndex) => {
           return (
             <div className={`column-${columnIndex + 1}`} key={columnIndex}>

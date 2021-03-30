@@ -1,7 +1,7 @@
 .snap-gallery {
   .gallery-title {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-transform: uppercase;
     font-family: $fontTitle;
@@ -23,6 +23,10 @@
 
 @media only screen and (min-width: $mobileSize) {
   .snap-gallery {
+    .gallery-title {
+      justify-content: center;
+    }
+
     .column-1,
     .column-2,
     .column-3 {

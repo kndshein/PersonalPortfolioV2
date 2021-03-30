@@ -1,4 +1,16 @@
 .snap-page {
+  .page-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $fontTitle;
+    font-weight: 600;
+    font-style: normal;
+    font-size: max(3vw, 3rem);
+    margin-bottom: 10px;
+  }
+
   .cards-container {
     display: flex;
     flex-flow: row wrap;
@@ -9,7 +21,7 @@
       position: relative;
       display: block;
       margin-right: 4%;
-      width: 30.6%;
+      width: (92% / 3);
       text-decoration: none;
       margin-bottom: 4%;
 

@@ -10,6 +10,7 @@ const SnapPage = ({ data }) => {
     <Layout>
       <SEO title="I Snap" />
       <div className="snap-page">
+        <div className="page-title">Snap</div>
         <div className="cards-container">
           {data.galleries.edges.map((gallery, index) => {
             const image = gallery.node.images.filter(

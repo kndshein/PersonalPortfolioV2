@@ -5,12 +5,33 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const DesignPage = () => {
+const DesignPage = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
-      <div>Design</div>
+      <SEO title="I Design" />
+      <div className="design-page">Design</div>
     </Layout>
   );
 };
 
 export default DesignPage;
+
+export const pageQuery = graphql`
+  query {
+    galleries: allContentfulDesignGallery {
+      edges {
+        node {
+          slug
+          galleryTitle
+          coverImage
+          images {
+            title
+            description
+            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 25)
+          }
+        }
+      }
+    }
+  }
+`;
