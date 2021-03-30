@@ -14,7 +14,11 @@ const NotFoundPage = () => {
         </div>
         <div className="poop">
           Since you're already here, might as well read about that one time I{" "}
-          <a href="" target="_blank" rel="noreferrer">
+          <a
+            href="https://medium.com/the-haven/poopy-di-scoop-that-one-time-i-pooped-my-pants-dbbfc4f1cc6b"
+            target="_blank"
+            rel="noreferrer"
+          >
             pooped my pants.
           </a>
         </div>

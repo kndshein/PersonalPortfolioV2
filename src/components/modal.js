@@ -8,7 +8,11 @@ const Modal = ({ cardData, showModal, handleModal }) => {
     <>
       {showModal && (
         <div className="modal">
-          <div className="modal-background" onClick={() => handleModal()} />
+          <div
+            className="modal-background"
+            onClick={() => handleModal()}
+            aria-hidden={true}
+          />
           <div className="close-icon" onClick={() => handleModal()}>
             <MdClose color="white" size={40} />
           </div>
