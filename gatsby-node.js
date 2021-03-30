@@ -13,6 +13,13 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        allContentfulDesignGallery {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
       }
     `
   )
@@ -21,7 +28,19 @@ exports.createPages = ({ graphql, actions }) => {
         console.log("Error with contentful data", result.errors);
       }
 
+      const designTemplate = path.resolve("./src/templates/DesignGallery.js");
+
       const snapTemplate = path.resolve("./src/templates/SnapGallery.js");
+
+      result.data.allContentfulDesignGallery.edges.forEach((gallery) => {
+        createPage({
+          path: `/design/${gallery.node.slug}/`,
+          component: slash(designTemplate),
+          context: {
+            slug: gallery.node.slug,
+          },
+        });
+      });
 
       result.data.allContentfulSnapGallery.edges.forEach((gallery) => {
         createPage({
