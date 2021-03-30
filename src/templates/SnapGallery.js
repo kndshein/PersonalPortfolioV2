@@ -13,6 +13,7 @@ const SnapGallery = ({ data }) => {
     images.push(data.gallery.images.slice(0, column));
     images.push(data.gallery.images.slice(column, column * 2));
     images.push(data.gallery.images.slice(column * 2));
+    console.log(images);
   }, []);
 
   return (

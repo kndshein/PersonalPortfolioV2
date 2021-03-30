@@ -45,7 +45,8 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit Website <MdOpenInNew size={15} />
+                  Visit Website {"  "}
+                  <MdOpenInNew size={15} style={{ marginLeft: "5px" }} />
                 </a>
                 <a
                   className="github-link"
@@ -53,7 +54,8 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Github <MdOpenInNew size={15} />
+                  Github {"  "}
+                  <MdOpenInNew size={15} style={{ marginLeft: "5px" }} />
                 </a>
               </div>
             </div>
