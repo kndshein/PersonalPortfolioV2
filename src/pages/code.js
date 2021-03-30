@@ -19,6 +19,8 @@ const CodePage = ({ data }) => {
     }
   };
 
+  console.log("code", showModal);
+
   return (
     <>
       <Modal
@@ -36,6 +38,9 @@ const CodePage = ({ data }) => {
                   className="card-container"
                   key={index}
                   onClick={() => handleModal(index)}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={() => handleModal(index)}
                 >
                   <div className="card-title">{project.node.title}</div>
                   <div className="card-image">

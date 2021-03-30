@@ -3,6 +3,7 @@ import { MdClose, MdOpenInNew } from "react-icons/md";
 
 const Modal = ({ cardData, showModal, handleModal }) => {
   console.log(cardData);
+  console.log("modal", showModal);
 
   return (
     <>
@@ -13,7 +14,13 @@ const Modal = ({ cardData, showModal, handleModal }) => {
             onClick={() => handleModal()}
             aria-hidden={true}
           />
-          <div className="close-icon" onClick={() => handleModal()}>
+          <div
+            className="close-icon"
+            onClick={() => handleModal()}
+            role="button"
+            tabIndex="0"
+            onKeyPress={() => handleModal()}
+          >
             <MdClose color="white" size={40} />
           </div>
           <div className="card-container">

@@ -17,31 +17,29 @@ const SnapGallery = ({ data }) => {
   }, []);
 
   return (
-    <>
-      <Layout>
-        <SEO title={data.gallery.galleryTitle} />
-        <div className="snap-gallery">
-          <div className="gallery-title">{data.gallery.galleryTitle}</div>
-          {images.map((column, columnIndex) => {
-            return (
-              <div className={`column-${columnIndex + 1}`} key={columnIndex}>
-                {column.map((image, imageIndex) => {
-                  return (
-                    <div className="image-container" key={imageIndex}>
-                      <GatsbyImage
-                        className="image"
-                        image={image.gatsbyImageData}
-                        alt={image.description}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
-      </Layout>
-    </>
+    <Layout>
+      <SEO title={data.gallery.galleryTitle} />
+      <div className="snap-gallery">
+        <div className="gallery-title">{data.gallery.galleryTitle}</div>
+        {images.map((column, columnIndex) => {
+          return (
+            <div className={`column-${columnIndex + 1}`} key={columnIndex}>
+              {column.map((image, imageIndex) => {
+                return (
+                  <div className="image-container" key={imageIndex}>
+                    <GatsbyImage
+                      className="image"
+                      image={image.gatsbyImageData}
+                      alt={image.description}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </Layout>
   );
 };
 

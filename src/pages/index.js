@@ -31,7 +31,7 @@ const HomePage = () => {
                 <div className="link-title">I code.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>CODE</span>;
+                    return <span key={index}>CODE</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
@@ -42,7 +42,7 @@ const HomePage = () => {
                 <div className="link-title">I design.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>DESIGN</span>;
+                    return <span key={index}>DESIGN</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
@@ -53,7 +53,7 @@ const HomePage = () => {
                 <div className="link-title">I snap.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
-                    return <span>SNAP</span>;
+                    return <span key={index}>SNAP</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
@@ -64,7 +64,7 @@ const HomePage = () => {
                 <div className="link-title">I am.</div>
                 <div className="link-hover">
                   {num2.map((x, index) => {
-                    return <span>AM</span>;
+                    return <span key={index}>AM</span>;
                   })}
                 </div>
                 <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
