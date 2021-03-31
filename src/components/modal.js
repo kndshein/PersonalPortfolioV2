@@ -26,7 +26,7 @@ const Modal = ({ cardData, showModal, handleModal }) => {
           <div className="card-container">
             <div className="title">{cardData.title}</div>
             <div className="preview-container">
-              <video autoPlay loop muted>
+              <video autoPlay loop muted playsInline>
                 <source src={cardData.preview.file.url} type="video/mp4" />
               </video>
             </div>

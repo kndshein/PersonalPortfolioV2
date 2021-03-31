@@ -31,6 +31,7 @@ const CodePage = ({ data }) => {
       <Layout>
         <SEO title="I Code" />
         <div className="code-page">
+          <div className="code-title">Code</div>
           <div className="cards-container">
             {data.projects.edges.map((project, index) => {
               return (

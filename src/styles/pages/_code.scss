@@ -2,6 +2,18 @@
 $codeTextHeight: 15%;
 
 .code-page {
+  .code-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $fontTitle;
+    font-weight: 600;
+    font-style: normal;
+    font-size: max(3vw, 3rem);
+    margin-bottom: 10px;
+  }
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
