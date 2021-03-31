@@ -1,19 +1,10 @@
 .design-page {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-flow: column;
   width: 100%;
-  padding-top: 75px;
 
   .page-title {
-    display: flex;
-    align-self: center;
-    justify-content: flex-end;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px 0 20px;
+    align-self: flex-end;
     text-transform: uppercase;
     font-family: $fontTitle;
     font-weight: 600;
@@ -26,7 +17,7 @@
     .card-link {
       .card-container {
         position: relative;
-        height: 25vh;
+        height: 15vh;
         overflow: hidden;
 
         .image-container {
@@ -54,8 +45,14 @@
           font-weight: 400;
           font-size: 4rem;
           color: white;
-          background-color: rgba(0, 0, 0, 0.8);
-          opacity: 1;
+          background-color: black;
+          opacity: 0;
+        }
+
+        &:hover {
+          .card-title {
+            opacity: 1;
+          }
         }
       }
     }

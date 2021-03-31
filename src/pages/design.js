@@ -2,16 +2,13 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-// import Layout from "../components/layout";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const DesignPage = ({ data }) => {
   console.log(data);
   return (
-    <>
-      <Navbar />
+    <Layout>
       <SEO title="I Design" />
       <div className="design-page">
         <div className="page-title">Design</div>
@@ -40,9 +37,8 @@ const DesignPage = ({ data }) => {
             );
           })}
         </div>
-        <Footer />
       </div>
-    </>
+    </Layout>
   );
 };
 
@@ -59,7 +55,7 @@ export const pageQuery = graphql`
           images {
             title
             description
-            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 10)
+            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 75)
           }
         }
       }

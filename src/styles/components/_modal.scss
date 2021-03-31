@@ -40,7 +40,7 @@
       font-family: $fontTitle;
       font-weight: 600;
       font-size: max(3vw, 3rem);
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       color: white;
     }
 
@@ -54,7 +54,7 @@
     }
 
     .text-container {
-      padding: 20px;
+      padding: 15px;
       background-color: white;
 
       .technologies {
@@ -72,7 +72,6 @@
 
       .description {
         font-size: 1.25rem;
-        margin-top: 10px;
       }
 
       .features {
