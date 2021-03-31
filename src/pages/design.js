@@ -2,13 +2,16 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import Layout from "../components/layout";
+// import Layout from "../components/layout";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import SEO from "../components/seo";
 
 const DesignPage = ({ data }) => {
   console.log(data);
   return (
-    <Layout>
+    <>
+      <Navbar />
       <SEO title="I Design" />
       <div className="design-page">
         <div className="page-title">Design</div>
@@ -24,16 +27,12 @@ const DesignPage = ({ data }) => {
                 key={index}
               >
                 <div className="card-container">
-                  <div className="cover-image-wrap">
-                    <div className="cover-image">
-                      <div className="image-container">
-                        <GatsbyImage
-                          className="image"
-                          image={image[0].gatsbyImageData}
-                          alt={image[0].description}
-                        />
-                      </div>
-                    </div>
+                  <div className="image-container">
+                    <GatsbyImage
+                      className="image"
+                      image={image[0].gatsbyImageData}
+                      alt={image[0].description}
+                    />
                   </div>
                   <div className="card-title">{gallery.node.galleryTitle}</div>
                 </div>
@@ -41,8 +40,9 @@ const DesignPage = ({ data }) => {
             );
           })}
         </div>
+        <Footer />
       </div>
-    </Layout>
+    </>
   );
 };
 
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
           images {
             title
             description
-            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 25)
+            gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 10)
           }
         }
       }
