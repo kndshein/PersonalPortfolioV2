@@ -1,4 +1,4 @@
-.snap-gallery {
+.snap-gallery-page {
   .gallery-title {
     display: flex;
     justify-content: flex-end;
@@ -9,14 +9,24 @@
     font-style: normal;
     font-size: max(3vw, 3rem);
     margin-bottom: 10px;
-  }
 
-  .column-1,
-  .column-2,
-  .column-3 {
-    .image-container {
-      width: 100%;
-      margin-bottom: 10px;
+    span {
+      font-family: $fontTitle;
+      font-weight: 600;
+      font-style: normal;
+      font-size: max(3vw, 3rem);
+      margin-right: 10px;
+      color: $accent;
+    }
+  }
+  .snap-gallery {
+    .column-1,
+    .column-2,
+    .column-3 {
+      .image-container {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -47,33 +57,14 @@
   .snap-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max(4vw, 30px) auto;
+    grid-template-rows: auto;
     gap: 10px;
-
-    .gallery-title {
-      grid-area: 1 / 1 / 2 / 4;
-      justify-content: flex-end;
-      margin: 0;
-    }
-
-    .column-1 {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .column-2 {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-
-    .column-3 {
-      grid-area: 2 / 3 / 3 / 4;
-    }
 
     .column-1,
     .column-2,
     .column-3 {
       display: flex;
       flex-flow: column;
-      gap: 10px;
 
       .image-container {
         width: 100%;

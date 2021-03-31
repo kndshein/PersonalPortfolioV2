@@ -19,27 +19,30 @@ const SnapGallery = ({ data }) => {
   return (
     <Layout>
       <SEO title={data.gallery.galleryTitle} />
-      <div className="snap-gallery">
+      <div className="snap-gallery-page">
         <div className="gallery-title">
-          <span>SNAP :</span> {data.gallery.galleryTitle}
+          <span>SNAP:</span>
+          {data.gallery.galleryTitle}
         </div>
-        {images.map((column, columnIndex) => {
-          return (
-            <div className={`column-${columnIndex + 1}`} key={columnIndex}>
-              {column.map((image, imageIndex) => {
-                return (
-                  <div className="image-container" key={imageIndex}>
-                    <GatsbyImage
-                      className="image"
-                      image={image.gatsbyImageData}
-                      alt={image.description}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+        <div className="snap-gallery">
+          {images.map((column, columnIndex) => {
+            return (
+              <div className={`column-${columnIndex + 1}`} key={columnIndex}>
+                {column.map((image, imageIndex) => {
+                  return (
+                    <div className="image-container" key={imageIndex}>
+                      <GatsbyImage
+                        className="image"
+                        image={image.gatsbyImageData}
+                        alt={image.description}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );
