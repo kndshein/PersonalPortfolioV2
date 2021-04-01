@@ -39,7 +39,7 @@ $codeTextHeight: 15%;
         font-weight: 400;
         font-size: max(2.25vw, 2.5rem);
         color: white;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: black;
         opacity: 0;
         transition: opacity 0.2s ease-out;
       }
@@ -57,20 +57,6 @@ $codeTextHeight: 15%;
           object-fit: cover;
         }
       }
-
-      // .card-overlay {
-      //   position: absolute;
-      //   top: $codeTextHeight;
-      //   left: 0;
-      //   display: none;
-      //   justify-content: center;
-      //   align-items: center;
-      //   height: 100% - $codeTextHeight;
-      //   width: 100%;
-      //   padding: 10px;
-      //   text-align: center;
-      //   color: white;
-      // }
 
       &:hover {
         .card-title {

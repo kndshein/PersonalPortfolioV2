@@ -12,7 +12,10 @@ const DesignGallery = ({ data }) => {
       <Layout>
         <SEO title={data.gallery.galleryTitle} />
         <div className="design-gallery">
-          <div className="gallery-title">{data.gallery.galleryTitle}</div>
+          <div className="gallery-title">
+            <span>DESIGN:</span>
+            {data.gallery.galleryTitle}
+          </div>
           {data.gallery.images.map((image, index) => {
             return (
               <div className="image-container" key={index}>
