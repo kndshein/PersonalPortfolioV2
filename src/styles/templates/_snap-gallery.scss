@@ -7,14 +7,14 @@
     font-family: $fontTitle;
     font-weight: 600;
     font-style: normal;
-    font-size: max(3vw, 3rem);
+    font-size: $galleryTitleFontSize;
     margin-bottom: 10px;
 
     span {
       font-family: $fontTitle;
       font-weight: 600;
       font-style: normal;
-      font-size: max(3vw, 3rem);
+      font-size: $galleryTitleFontSize;
       margin-right: 10px;
       color: $accent;
     }

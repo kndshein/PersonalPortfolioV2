@@ -2,24 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .gallery-title {
     align-self: flex-end;
-    // display: flex;
-    // justify-content: flex-end;
-    // align-items: center;
     text-align: right;
     text-transform: uppercase;
     font-family: $fontTitle;
     font-weight: 600;
     font-style: normal;
-    font-size: max(3vw, 3rem);
+    font-size: $galleryTitleFontSize;
     margin-bottom: 10px;
 
     span {
       font-family: $fontTitle;
       font-weight: 600;
       font-style: normal;
-      font-size: max(3vw, 3rem);
+      font-size: $galleryTitleFontSize;
       margin-right: 10px;
       color: $accent;
     }

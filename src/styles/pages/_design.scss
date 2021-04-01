@@ -9,7 +9,7 @@
     font-family: $fontTitle;
     font-weight: 600;
     font-style: normal;
-    font-size: max(3vw, 3rem);
+    font-size: $galleryTitleFontSize;
     margin-bottom: 10px;
   }
 
@@ -44,7 +44,7 @@
           text-transform: uppercase;
           font-family: $fontTitle;
           font-weight: 400;
-          font-size: clamp(2rem, 5vw, 4rem);
+          font-size: $galleryCardFontSize;
           color: white;
           background-color: black;
           opacity: 0;

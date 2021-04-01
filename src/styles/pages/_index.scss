@@ -112,6 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5px;
 
     div {
       span {
@@ -125,7 +126,7 @@
       align-items: center;
       padding: 0;
       margin: 0;
-      margin-top: 10px;
+      margin-top: 5px;
 
       li {
         margin-left: 15px;
@@ -153,6 +154,7 @@
       height: 90%;
       width: 100%;
       margin-top: 20px;
+      padding: 15px;
 
       .logo-container {
         .logo-content {
@@ -167,7 +169,7 @@
         .snap,
         .design,
         .about {
-          height: 23%;
+          height: 24%;
           width: 100%;
         }
       }
