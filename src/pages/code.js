@@ -66,7 +66,7 @@ export default CodePage;
 
 export const pageQuery = graphql`
   query {
-    projects: allContentfulCodeGallery {
+    projects: allContentfulCodeGallery(sort: { fields: order, order: ASC }) {
       edges {
         node {
           title

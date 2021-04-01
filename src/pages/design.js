@@ -46,7 +46,7 @@ export default DesignPage;
 
 export const pageQuery = graphql`
   query {
-    galleries: allContentfulDesignGallery {
+    galleries: allContentfulDesignGallery(sort: { fields: order, order: ASC }) {
       edges {
         node {
           slug

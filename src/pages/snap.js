@@ -49,7 +49,7 @@ export default SnapPage;
 
 export const pageQuery = graphql`
   query {
-    galleries: allContentfulSnapGallery {
+    galleries: allContentfulSnapGallery(sort: { fields: order, order: ASC }) {
       edges {
         node {
           slug
