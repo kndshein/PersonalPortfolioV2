@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Typist from "react-typist";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 
 import SEO from "../components/seo";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
+  console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
   var num = [],
     num2 = [],
     i = 0,
@@ -34,7 +36,11 @@ const HomePage = () => {
                     return <span key={index}>CODE</span>;
                   })}
                 </div>
-                <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+                <GatsbyImage
+                  className="image"
+                  image={data.allContentfulAsset.edges[3].node.gatsbyImageData}
+                  alt={data.allContentfulAsset.edges[3].node.description}
+                />
               </Link>
             </div>
             <div className="snap">
@@ -45,7 +51,11 @@ const HomePage = () => {
                     return <span key={index}>DESIGN</span>;
                   })}
                 </div>
-                <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+                <GatsbyImage
+                  className="image"
+                  image={data.allContentfulAsset.edges[0].node.gatsbyImageData}
+                  alt={data.allContentfulAsset.edges[0].node.description}
+                />
               </Link>
             </div>
             <div className="design">
@@ -56,7 +66,11 @@ const HomePage = () => {
                     return <span key={index}>SNAP</span>;
                   })}
                 </div>
-                <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+                <GatsbyImage
+                  className="image"
+                  image={data.allContentfulAsset.edges[1].node.gatsbyImageData}
+                  alt={data.allContentfulAsset.edges[1].node.description}
+                />
               </Link>
             </div>
             <div className="about">
@@ -67,7 +81,11 @@ const HomePage = () => {
                     return <span key={index}>AM</span>;
                   })}
                 </div>
-                <img src="https://a.espncdn.com/photo/2020/0903/r740305_1296x729_16-9.jpg" />
+                <GatsbyImage
+                  className="image"
+                  image={data.allContentfulAsset.edges[2].node.gatsbyImageData}
+                  alt={data.allContentfulAsset.edges[2].node.description}
+                />
               </Link>
             </div>
           </div>
@@ -92,7 +110,7 @@ const HomePage = () => {
             <Typist.Backspace count={10} delay={800} />
             <span>Planted Aquarium Admirer</span>
             <Typist.Backspace count={24} delay={500} />
-            <span>Front-End Developer</span>
+            <span>Full-Stack Developer</span>
           </Typist>
           <ul>
             <li>
@@ -130,3 +148,28 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const pageQuery = graphql`
+  {
+    allContentfulAsset(
+      filter: {
+        title: {
+          in: [
+            "MM 0909"
+            "Code Card"
+            "TeacherSouls - Businesscard Mockup"
+            "Profile Picture Alt"
+          ]
+        }
+      }
+      sort: { fields: contentful_id, order: ASC }
+    ) {
+      edges {
+        node {
+          description
+          gatsbyImageData(quality: 50, formats: [JPG], layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+`;
