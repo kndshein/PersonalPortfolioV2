@@ -61,7 +61,7 @@
               height: 100%;
               width: 100%;
 
-              background-color: black;
+              background-color: $primaryColor;
               opacity: 0;
             }
 
@@ -101,8 +101,8 @@
           font-family: $fontTitle;
           font-weight: 400;
           font-size: $galleryCardFontSize;
-          color: white;
-          background-color: black;
+          color: $secondaryColor;
+          background-color: $primaryColor;
           opacity: 0;
           transition: opacity 0.2s ease-out;
         }

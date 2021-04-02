@@ -23,7 +23,7 @@ $codeTextHeight: 15%;
       cursor: pointer;
       position: relative;
       height: 300px;
-      // outline: 1px solid black;
+      // outline: 1px solid $primaryColor;
 
       .card-title {
         z-index: 5;
@@ -39,8 +39,8 @@ $codeTextHeight: 15%;
         font-family: $fontTitle;
         font-weight: 400;
         font-size: $galleryCardFontSize;
-        color: white;
-        background-color: black;
+        color: $secondaryColor;
+        background-color: $primaryColor;
         opacity: 0;
         transition: opacity 0.2s ease-out;
       }

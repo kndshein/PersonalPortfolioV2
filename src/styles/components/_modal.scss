@@ -42,7 +42,7 @@
       font-weight: 600;
       font-size: max(3vw, 3rem);
       margin-bottom: 5px;
-      color: white;
+      color: $secondaryColor;
     }
 
     .preview-container {
@@ -56,7 +56,7 @@
 
     .text-container {
       padding: 15px;
-      background-color: white;
+      background-color: $secondaryColor;
 
       .technologies {
         display: flex;
@@ -112,9 +112,9 @@
           font-weight: 700;
           padding: 10px;
           margin-right: 10px;
-          background-color: black;
+          background-color: $primaryColor;
           border-radius: 5px;
-          color: white;
+          color: $secondaryColor;
 
           &:hover {
             background-color: $darkAccent;

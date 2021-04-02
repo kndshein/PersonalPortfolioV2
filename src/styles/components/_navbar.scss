@@ -47,7 +47,7 @@
         .menu-button-burger {
           width: 20px;
           height: 4px;
-          background: black;
+          background: $primaryColor;
           border-radius: 2px;
           transition: 0.1s ease-in-out;
 
@@ -57,7 +57,7 @@
             position: absolute;
             width: 15px;
             height: 4px;
-            background: black;
+            background: $primaryColor;
             border-radius: 2px;
             transition: 0.1s ease-in-out;
           }

@@ -29,7 +29,7 @@ const HomePage = ({ data }) => {
           </div>
           <div className="links">
             <div className="code">
-              <Link to="/code">
+              <Link to="/code/">
                 <div className="link-title">I code.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
@@ -44,7 +44,7 @@ const HomePage = ({ data }) => {
               </Link>
             </div>
             <div className="snap">
-              <Link to="/design">
+              <Link to="/design/">
                 <div className="link-title">I design.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
@@ -59,7 +59,7 @@ const HomePage = ({ data }) => {
               </Link>
             </div>
             <div className="design">
-              <Link to="/snap">
+              <Link to="/snap/">
                 <div className="link-title">I snap.</div>
                 <div className="link-hover">
                   {num.map((x, index) => {
@@ -74,7 +74,7 @@ const HomePage = ({ data }) => {
               </Link>
             </div>
             <div className="about">
-              <Link to="/about">
+              <Link to="/about/">
                 <div className="link-title">I am.</div>
                 <div className="link-hover">
                   {num2.map((x, index) => {
