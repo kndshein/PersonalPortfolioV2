@@ -7,7 +7,7 @@ import Form from "../components/form";
 const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="About Me" />
+      <SEO title="I am" />
       <div className="about-page">
         <div className="about-text">
           <img
