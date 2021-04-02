@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "framer-motion": "^3.10.5",
+    "framer-motion": "^3.10.6",
     "gatsby": "^3.0.3",
     "gatsby-image": "^3.0.0",
     "gatsby-plugin-image": "^1.0.0",

@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Typist from "react-typist";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 import SEO from "../components/seo";
 
@@ -18,7 +19,17 @@ const HomePage = ({ data }) => {
   while (++j <= len2) num2.push(i);
 
   return (
-    <>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        type: "spring",
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
+      }}
+    >
       <SEO title="Home" />
       <div className="homepage-container">
         <div className="links-container">
@@ -143,7 +154,7 @@ const HomePage = ({ data }) => {
           </ul>
         </div>
       </div>
-    </>
+    </motion.main>
   );
 };
 
