@@ -1,0 +1,49 @@
+.overlay {
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+
+  .overlay-content {
+    width: 100%;
+    text-align: center;
+    font-family: $fontText;
+    font-weight: 700;
+    font-style: normal;
+    pointer-events: visible;
+
+    li {
+      list-style-type: none;
+
+      .active {
+        font-style: oblique;
+        color: black;
+      }
+
+      a {
+        position: relative;
+        padding: 8px;
+        text-decoration: none;
+        font-size: 3rem;
+        color: $accent;
+        display: block;
+      }
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    // transition: opacity 1s ease-in-out;
+  }
+}

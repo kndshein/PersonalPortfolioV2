@@ -6,9 +6,6 @@
       #mobile-nav {
         display: none;
       }
-      // #logo {
-      //   display: flex;
-      // }
 
       .navbar-links {
         display: flex;
@@ -16,16 +13,21 @@
         list-style-type: none;
 
         li {
+          .active {
+            font-style: oblique;
+            color: black;
+          }
+
           a {
             margin-left: 25px;
             font-family: $fontText;
             font-weight: 500;
             font-size: 1.5rem;
             font-style: normal;
-            // text-transform: uppercase;
+            color: $accent;
 
-            &::after {
-              content: ".";
+            &:hover {
+              color: black;
             }
           }
         }
