@@ -9,6 +9,7 @@
     "framer-motion": "^3.10.6",
     "gatsby": "^3.0.3",
     "gatsby-image": "^3.0.0",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",

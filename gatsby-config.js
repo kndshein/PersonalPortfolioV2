@@ -18,6 +18,7 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-dark-mode",
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-contentful`,

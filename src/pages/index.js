@@ -6,6 +6,7 @@ import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 import SEO from "../components/seo";
+import ThemeToggle from "../components/themetoggler";
 
 const HomePage = ({ data }) => {
   // console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
@@ -18,15 +19,34 @@ const HomePage = ({ data }) => {
   while (++i <= len) num.push(i);
   while (++j <= len2) num2.push(i);
 
+  // const container = {
+  //   initial: { opacity: 0 },
+  //   animate: {
+  //     opacity: 1,
+  //     transition: {
+  //       delayChildren: 0.3,
+  //       staggerChildren: 0.3,
+  //       // staggerDirection: -1,
+  //     },
+  //   },
+  // };
+
+  // const children = {
+  //   initial: { height: 0 },
+  //   animate: {
+  //     height: "100%",
+  //     transition: {
+  //       duration: 0.3,
+  //     },
+  //   },
+  // };
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{
-        type: "spring",
-        mass: 0.35,
-        stiffness: 75,
         duration: 0.3,
       }}
     >
@@ -124,6 +144,7 @@ const HomePage = ({ data }) => {
             <span>Full-Stack Developer</span>
           </Typist>
           <ul>
+            <ThemeToggle />
             <li>
               <a
                 target="_blank"
