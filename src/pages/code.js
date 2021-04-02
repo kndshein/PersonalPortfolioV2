@@ -19,7 +19,7 @@ const CodePage = ({ data }) => {
     }
   };
 
-  console.log("code", showModal);
+  // console.log("code", showModal);
 
   return (
     <>

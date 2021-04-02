@@ -2,8 +2,8 @@ import React from "react";
 import { MdClose, MdOpenInNew } from "react-icons/md";
 
 const Modal = ({ cardData, showModal, handleModal }) => {
-  console.log(cardData);
-  console.log("modal", showModal);
+  // console.log(cardData);
+  // console.log("modal", showModal);
 
   return (
     <>

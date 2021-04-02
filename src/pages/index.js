@@ -7,7 +7,7 @@ import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 import SEO from "../components/seo";
 
 const HomePage = ({ data }) => {
-  console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
+  // console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
   var num = [],
     num2 = [],
     i = 0,

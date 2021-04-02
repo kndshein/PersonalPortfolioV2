@@ -7,9 +7,8 @@ const Form = () => {
     fetch(`${process.env.GATSBY_GOOGLE_SHEETS}`, {
       method: "POST",
       body: new FormData(document.forms["submit-to-google-sheet"]),
-    })
-      .then(setFormSubmit(true))
-      .catch((error) => console.error("Error!", error.message));
+    }).then(setFormSubmit(true));
+    // .catch((error) => console.error("Error!", error.message));
   };
 
   return (
