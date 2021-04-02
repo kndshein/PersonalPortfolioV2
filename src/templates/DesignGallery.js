@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const DesignGallery = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <Layout>
