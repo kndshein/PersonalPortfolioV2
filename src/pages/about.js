@@ -17,11 +17,18 @@ const AboutPage = () => {
           />
           <h2>
             Yello! My name is Kaung,
-            <br />
-            <span>pronounced like King </span>
-            <span>Kong.</span>
+            {/* <br /> */}
+            <div>
+              <span>pronounced like King </span>
+              <span>Kong.</span>
+            </div>
           </h2>
           <p>
+            Full-stack developer building software through the lens of science,
+            data, and aesthetics. Driven by creating solutions for a dynamic
+            balance of form and function. Constantly striving for a “no-effort”
+            look with maximum effort. <br />
+            <br />
             I am a graphic designer and an aspiring software engineer with a
             background in Biochemistry and Studio Art. After graduating from
             Beloit College, a small liberal arts college in Wisconsin, I worked
