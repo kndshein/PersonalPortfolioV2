@@ -1,5 +1,3 @@
-// Code Page Variables
-
 .code-page {
   .code-title {
     display: flex;
@@ -16,7 +14,7 @@
   .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: min(10vw, 50px);
+    gap: max(2vw, 20px);
 
     .card-container {
       cursor: pointer;
@@ -67,3 +65,17 @@
 }
 
 @import "../components/modal";
+
+@media only screen and (max-width: $tabletSize) {
+  .code-page {
+    .cards-container {
+      .card-container {
+        .card-title {
+          opacity: 1;
+          top: 80%;
+          height: 20%;
+        }
+      }
+    }
+  }
+}
