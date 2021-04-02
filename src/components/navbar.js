@@ -12,22 +12,22 @@ const Navbar = () => {
       <div className={`overlay ${mobileOpen ? "open" : ""}`}>
         <div className="overlay-content">
           <li>
-            <Link to="/code" activeClassName="active">
+            <Link to="/code/" activeClassName="active">
               I code.
             </Link>
           </li>
           <li>
-            <Link to="/design" activeClassName="active">
+            <Link to="/design/" activeClassName="active">
               I design.
             </Link>
           </li>
           <li>
-            <Link to="/snap" activeClassName="active">
+            <Link to="/snap/" activeClassName="active">
               I snap.
             </Link>
           </li>
           <li>
-            <Link to="/about" activeClassName="active">
+            <Link to="/about/" activeClassName="active">
               I am.
             </Link>
           </li>
@@ -51,22 +51,22 @@ const Navbar = () => {
           </div>
           <ul className="navbar-links">
             <li>
-              <Link to="/code" activeClassName="active">
+              <Link to="/code/" activeClassName="active">
                 I code.
               </Link>
             </li>
             <li>
-              <Link to="/design" activeClassName="active">
+              <Link to="/design/" activeClassName="active">
                 I design.
               </Link>
             </li>
             <li>
-              <Link to="/snap" activeClassName="active">
+              <Link to="/snap/" activeClassName="active">
                 I snap.
               </Link>
             </li>
             <li>
-              <Link to="/about" activeClassName="active">
+              <Link to="/about/" activeClassName="active">
                 I am.
               </Link>
             </li>

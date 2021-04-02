@@ -1,13 +1,14 @@
 import React from "react";
 
 const Form = () => {
+  const [formSubmit, setFormSubmit] = React.useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch(`${process.env.GATSBY_GOOGLE_SHEETS}`, {
       method: "POST",
       body: new FormData(document.forms["submit-to-google-sheet"]),
     })
-      .then((response) => console.log("Success!", response))
+      .then(setFormSubmit(true))
       .catch((error) => console.error("Error!", error.message));
   };
 
@@ -51,8 +52,8 @@ const Form = () => {
           </div>
           <input id="about-form-button" type="submit" value="Submit" />
         </form>
-        <div id="form-thank" className="form-thank">
-          <div id="form-thank-text" className="form-thank-text">
+        <div className={`form-thank ${formSubmit ? "clicked" : ""}`}>
+          <div className={`form-thank-text ${formSubmit ? "clicked" : ""}`}>
             Thanks for reaching out! I'll get back to you in a jiffy.
           </div>
         </div>
