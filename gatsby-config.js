@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Kaung Nan Dar Shein Portfolio`,
+        name: `Kaung Nan Dar Shein Personal Portfolio`,
         short_name: `KNDS`,
         start_url: `/`,
         background_color: `#111111`,
