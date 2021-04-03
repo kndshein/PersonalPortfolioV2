@@ -19,6 +19,7 @@
         position: relative;
         height: 20vh;
         overflow: hidden;
+        margin-bottom: 20px;
 
         .image-container {
           width: 100%;
@@ -67,7 +68,7 @@
       .card-link {
         .card-container {
           height: 55vh;
-          margin-bottom: 20px;
+          // margin-bottom: 20px;
 
           .card-title {
             display: flex;

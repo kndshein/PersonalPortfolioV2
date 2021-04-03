@@ -2,9 +2,11 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: `Kaung Nan Dar Shein`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Kaung Nan Dar Shein Personal Portfolio`,
+    description: `Full-Stack Developer, Graphic Designer, and former Chemist. Kaung Nan Dar Shein is originally from Yangon, Myanmar, currently based out of NYC.`,
+    url: "https://knds.art",
+    image: `src/images/KNDSImageCard.JPG`,
+    author: `Kaung Nan Dar Shein`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,13 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Kaung Nan Dar Shein Portfolio`,
+        short_name: `KNDS`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#111111`,
+        theme_color: `#FFFFFF`,
+        display: `standalone`,
+        icon: `src/images/favicon-alt.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

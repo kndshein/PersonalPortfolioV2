@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
-import { IoMoonOutline, IoMoonSharp } from "react-icons/io5";
+import { IoMoonSharp } from "react-icons/io5";
 
 const ThemeToggle = () => {
   return (
