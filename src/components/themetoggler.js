@@ -9,6 +9,9 @@ const ThemeToggle = () => {
         <div
           className={`theme-toggler ${theme === "dark" ? "dark" : ""}`}
           onClick={() => toggleTheme(theme === "light" ? "dark" : "light")}
+          role="button"
+          tabIndex="0"
+          onKeyPress={() => toggleTheme(theme === "light" ? "dark" : "light")}
         >
           <IoMoonSharp />
         </div>

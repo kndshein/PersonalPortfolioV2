@@ -42,6 +42,9 @@ const Navbar = () => {
             <div
               className={`menu-button ${mobileOpen ? "open" : ""}`}
               onClick={() => handleMobileNav()}
+              role="button"
+              tabIndex="0"
+              onKeyPress={() => handleMobileNav()}
             >
               <div className="menu-button-burger"></div>
             </div>
