@@ -168,7 +168,54 @@ body.dark {
             }
           }
           .github-link {
-            background-color: $dark-accent;
+            color: $dark-liteAccent;
+            background-color: $dark-darkAccent;
+
+            &:hover {
+              color: $dark-darkAccent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: none), (hover: on-demand) {
+  .modal {
+    .card-container {
+      .text-container {
+        .links {
+          a {
+            &:hover {
+              background-color: $primaryColor;
+            }
+          }
+          .github-link {
+            &:hover {
+              background-color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body.dark {
+    .modal {
+      .card-container {
+        .text-container {
+          .links {
+            a {
+              &:hover {
+                background-color: $dark-primaryColor;
+              }
+            }
+            .github-link {
+              &:hover {
+                background-color: $dark-liteAccent;
+              }
+            }
           }
         }
       }
