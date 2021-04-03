@@ -131,16 +131,16 @@ const HomePage = ({ data }) => {
             <Typist.Backspace count={19} delay={800} />
             <span>Graphic Designer</span>
             <Typist.Backspace count={16} delay={500} />
-            <span>Biochemist</span>
-            <Typist.Backspace count={10} delay={800} />
             <span>Keyboard Enthusiast</span>
             <Typist.Backspace count={19} delay={500} />
+            <span>Chemist</span>
+            <Typist.Backspace count={7} delay={800} />
             <span>Avid Gamer</span>
             <Typist.Backspace count={10} delay={800} />
             <span>Minimalist</span>
             <Typist.Backspace count={10} delay={800} />
-            <span>Planted Aquarium Admirer</span>
-            <Typist.Backspace count={24} delay={500} />
+            <span>Aquarium Admirer</span>
+            <Typist.Backspace count={16} delay={500} />
             <span>Full-Stack Developer</span>
           </Typist>
           <ul>
