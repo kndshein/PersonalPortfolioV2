@@ -128,3 +128,50 @@
     }
   }
 }
+
+body.dark {
+  .modal {
+    .card-container {
+      .text-container {
+        background-color: $dark-secondaryColor;
+
+        .technologies {
+          span {
+            color: $dark-liteAccent;
+            background-color: $dark-darkAccent;
+          }
+        }
+
+        .description {
+          color: $dark-primaryColor;
+        }
+
+        .features {
+          .features-title {
+            color: $dark-accent;
+          }
+
+          .features-list {
+            li {
+              color: $dark-liteAccent;
+            }
+          }
+        }
+
+        .links {
+          a {
+            color: $dark-secondaryColor;
+            background-color: $dark-primaryColor;
+
+            &:hover {
+              background-color: $dark-liteAccent;
+            }
+          }
+          .github-link {
+            background-color: $dark-accent;
+          }
+        }
+      }
+    }
+  }
+}

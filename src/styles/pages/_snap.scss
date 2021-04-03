@@ -165,3 +165,11 @@
     }
   }
 }
+
+body.dark {
+  .snap-page {
+    .page-title {
+      color: $dark-primaryColor;
+    }
+  }
+}

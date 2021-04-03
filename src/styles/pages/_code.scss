@@ -79,3 +79,11 @@
     }
   }
 }
+
+body.dark {
+  .code-page {
+    .code-title {
+      color: $dark-primaryColor;
+    }
+  }
+}
