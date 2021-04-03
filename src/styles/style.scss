@@ -63,7 +63,7 @@ body {
   animation-fill-mode: forwards;
 
   a {
-    color: black;
+    color: $primaryColor;
     text-decoration: none;
     &:hover {
       color: $accent;
@@ -89,6 +89,26 @@ body.dark {
   }
 }
 
+.Typist .Cursor {
+  display: inline-block;
+
+  &--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @import "./components/navbar";
 @import "./pages/index";
 @import "./pages/design";
@@ -107,21 +127,27 @@ body.dark {
   }
 }
 
-.Typist .Cursor {
-  display: inline-block;
+@media (hover: none), (hover: on-demand) {
+  body {
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: $primaryColor;
+      }
+      &:active {
+        color: $primaryColor;
+      }
+    }
+  }
 
-  &--blinking {
-    opacity: 1;
-    animation: blink 1s linear infinite;
-    @keyframes blink {
-      0% {
-        opacity: 1;
+  body.dark {
+    a {
+      &:hover {
+        color: $dark-accent;
       }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
+      &:active {
+        color: $dark-accent;
       }
     }
   }

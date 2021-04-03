@@ -242,3 +242,30 @@ body.dark {
 }
 
 @import "../components/themetoggler";
+
+@media (hover: none), (hover: on-demand) {
+  .homepage-container {
+    .links-container {
+      .links {
+        .code,
+        .snap,
+        .design,
+        .about {
+          &:hover {
+            .link-hover {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body.dark {
+    .logo-container {
+      &:hover {
+        color: $dark-liteAccent;
+      }
+    }
+  }
+}

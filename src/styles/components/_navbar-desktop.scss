@@ -59,3 +59,22 @@ body.dark {
     }
   }
 }
+
+@media (hover: none), (hover: on-demand) {
+  .navbar-container {
+    .navbar {
+      .navbar-links {
+        li {
+          a {
+            &:hover {
+              color: $primaryColor;
+            }
+            &:active {
+              color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
