@@ -1,6 +1,5 @@
 @media only screen and (min-width: $tabletSize) {
   .navbar-container {
-    background-color: $secondaryColor;
     .navbar {
       #mobile-nav {
         display: none;
@@ -45,14 +44,14 @@ body.dark {
       .navbar-links {
         li {
           .active {
-            color: $dark-liteAccent;
+            color: $dark-primaryColor;
           }
 
           a {
             color: $dark-accent;
 
             &:hover {
-              color: $dark-liteAccent;
+              color: $dark-primaryColor;
             }
           }
         }

@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   height: 75px;
+  background-color: $secondaryColor;
 
   #logo {
     text-transform: uppercase;
@@ -124,10 +125,10 @@ body.dark {
     background-color: $dark-secondaryColor;
 
     #logo {
-      color: $dark-liteAccent;
+      color: $dark-primaryColor;
 
       &:hover {
-        color: $dark-primaryColor;
+        color: $dark-liteAccent;
       }
     }
 

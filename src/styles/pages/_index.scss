@@ -186,10 +186,10 @@ body.dark {
 
       .logo-container {
         .logo-content {
-          color: $dark-liteAccent;
+          color: $dark-primaryColor;
 
           &:hover {
-            color: $dark-primaryColor;
+            color: $dark-liteAccent;
           }
         }
 
