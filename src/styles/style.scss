@@ -130,8 +130,6 @@ body.dark {
 @media (hover: none), (hover: on-demand) {
   body {
     a {
-      color: black;
-      text-decoration: none;
       &:hover {
         color: $primaryColor;
       }

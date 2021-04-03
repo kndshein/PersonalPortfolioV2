@@ -21,3 +21,13 @@
     }
   }
 }
+
+@media (hover: none), (hover: on-demand) {
+  .theme-toggler {
+    &:hover {
+      svg {
+        fill: rgb(255, 196, 0);
+      }
+    }
+  }
+}

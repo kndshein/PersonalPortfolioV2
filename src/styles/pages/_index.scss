@@ -235,6 +235,12 @@ body.dark {
           svg {
             fill: $dark-liteAccent;
           }
+
+          &:hover {
+            svg {
+              fill: $dark-primaryColor;
+            }
+          }
         }
       }
     }
@@ -262,9 +268,29 @@ body.dark {
   }
 
   body.dark {
-    .logo-container {
-      &:hover {
-        color: $dark-liteAccent;
+    .homepage-container {
+      .links-container {
+        .logo-container {
+          .logo-content {
+            &:hover {
+              color: $dark-primaryColor;
+            }
+          }
+        }
+      }
+
+      .social-links {
+        ul {
+          li {
+            a {
+              &:hover {
+                svg {
+                  fill: $dark-liteAccent;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

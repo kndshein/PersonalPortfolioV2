@@ -14,6 +14,10 @@
     font-size: $logoFontSize;
     line-height: $logoLineHeight;
     color: $primaryColor;
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   .navbar {
@@ -157,6 +161,25 @@ body.dark {
           &.open {
             background-color: $dark-darkAccent;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: none), (hover: on-demand) {
+  .navbar-container {
+    #logo {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+  body.dark {
+    .navbar-container {
+      #logo {
+        &:hover {
+          color: $dark-primaryColor;
         }
       }
     }

@@ -198,3 +198,28 @@ body.dark {
     }
   }
 }
+
+@media (hover: none), (hover: on-demand) {
+  .about-form-container {
+    .about-form {
+      #about-form-button {
+        &:hover {
+          background-color: $liteAccent;
+        }
+      }
+    }
+  }
+
+  body.dark {
+    .about-form-container {
+      .about-form {
+        #about-form-button {
+          &:hover {
+            color: $dark-liteAccent;
+            background-color: $dark-darkAccent;
+          }
+        }
+      }
+    }
+  }
+}

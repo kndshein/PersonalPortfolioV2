@@ -66,3 +66,39 @@ body.dark {
     }
   }
 }
+
+@media (hover: none), (hover: on-demand) {
+  .footer {
+    .social-links {
+      ul {
+        li {
+          a {
+            &:hover {
+              svg {
+                fill: $accent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body.dark {
+    .footer {
+      .social-links {
+        ul {
+          li {
+            a {
+              &:hover {
+                svg {
+                  fill: $dark-darkAccent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
