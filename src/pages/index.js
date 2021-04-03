@@ -144,7 +144,6 @@ const HomePage = ({ data }) => {
             <span>Full-Stack Developer</span>
           </Typist>
           <ul>
-            <ThemeToggle />
             <li>
               <a
                 target="_blank"
@@ -172,6 +171,7 @@ const HomePage = ({ data }) => {
                 <GrMedium />
               </a>
             </li>
+            <ThemeToggle />
           </ul>
         </div>
       </div>
