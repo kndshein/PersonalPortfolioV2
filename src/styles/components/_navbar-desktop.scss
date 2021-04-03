@@ -1,7 +1,6 @@
 @media only screen and (min-width: $tabletSize) {
   .navbar-container {
     background-color: $secondaryColor;
-
     .navbar {
       #mobile-nav {
         display: none;
@@ -28,6 +27,32 @@
 
             &:hover {
               color: $primaryColor;
+            }
+
+            &:active {
+              color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.dark {
+  .navbar-container {
+    .navbar {
+      .navbar-links {
+        li {
+          .active {
+            color: $dark-liteAccent;
+          }
+
+          a {
+            color: $dark-accent;
+
+            &:hover {
+              color: $dark-liteAccent;
             }
           }
         }

@@ -47,3 +47,19 @@
     // transition: opacity 1s ease-in-out;
   }
 }
+
+body.dark {
+  .overlay {
+    .overlay-content {
+      li {
+        .active {
+          color: $dark-primaryColor;
+        }
+
+        a {
+          color: $dark-accent;
+        }
+      }
+    }
+  }
+}

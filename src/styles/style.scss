@@ -8,11 +8,11 @@ $accent: #aaaaaa;
 $darkAccent: #555555;
 
 // Dark Colors
-$darkPrimaryColor: white;
-$darkSecondaryColor: black;
-$darkLiteAccent: red;
-$darkAccent: blue;
-$darkDarkAccent: yellowgreen;
+$dark-primaryColor: white;
+$dark-secondaryColor: #111111;
+$dark-liteAccent: #aaaaaa;
+$dark-accent: #555555;
+$dark-darkAccent: #353535;
 
 // Fonts
 $fontTitle: bebas-neue-pro, sans-serif;
@@ -61,16 +61,31 @@ body {
   animation: fadeInAnimation ease-in-out 0.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: $accent;
+    }
+    &:active {
+      color: $primaryColor;
+    }
+  }
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: $accent;
-  }
-  &:focus {
-    color: $primaryColor;
+body.dark {
+  background-color: $dark-secondaryColor;
+
+  a {
+    color: $dark-accent;
+    text-decoration: none;
+    &:hover {
+      color: $dark-liteAccent;
+    }
+    &:active {
+      color: $dark-accent;
+    }
   }
 }
 

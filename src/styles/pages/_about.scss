@@ -1,17 +1,17 @@
-#profile-pic {
-  display: block;
-  width: calc(min(15vw, 250px));
-  min-width: 200px;
-  height: calc(min(15vw, 250px));
-  min-height: 200px;
-  margin: 0 auto 3vw auto;
-  object-fit: cover;
-  border: 1px solid $primaryColor;
-  border-radius: 50%;
-}
-
 .about-page {
   width: 100%;
+
+  #profile-pic {
+    display: block;
+    width: calc(min(15vw, 250px));
+    min-width: 200px;
+    height: calc(min(15vw, 250px));
+    min-height: 200px;
+    margin: 0 auto 3vw auto;
+    object-fit: cover;
+    border: 2px solid $primaryColor;
+    border-radius: 50%;
+  }
 
   .about-text {
     width: 100%;
@@ -58,6 +58,28 @@
   .about-page {
     .about-text {
       width: 75%;
+    }
+  }
+}
+
+body.dark {
+  .about-page {
+    #profile-pic {
+      border: 2px solid $dark-primaryColor;
+    }
+
+    .about-text {
+      h2 {
+        color: $dark-primaryColor;
+
+        span {
+          color: $dark-accent;
+        }
+      }
+
+      p {
+        color: $dark-primaryColor;
+      }
     }
   }
 }

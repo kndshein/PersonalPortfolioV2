@@ -1,12 +1,3 @@
-#logo,
-#logo-alt {
-  text-transform: uppercase;
-  font-family: $fontTitle;
-  font-weight: 600;
-  font-size: $logoFontSize;
-  line-height: $logoLineHeight;
-}
-
 .navbar-container {
   z-index: 10;
   position: fixed;
@@ -14,7 +5,15 @@
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: $secondaryColor;
+
+  #logo {
+    text-transform: uppercase;
+    font-family: $fontTitle;
+    font-weight: 600;
+    font-size: $logoFontSize;
+    line-height: $logoLineHeight;
+    color: $primaryColor;
+  }
 
   .navbar {
     display: flex;
@@ -119,3 +118,46 @@
 
 @import "./navbar-desktop";
 @import "./navbar-mobile";
+
+body.dark {
+  .navbar-container {
+    background-color: $dark-secondaryColor;
+
+    #logo {
+      color: $dark-liteAccent;
+
+      &:hover {
+        color: $dark-primaryColor;
+      }
+    }
+
+    .navbar {
+      #mobile-nav {
+        .menu-button {
+          .menu-button-burger {
+            background: $dark-liteAccent;
+
+            &::before,
+            &::after {
+              background: $dark-liteAccent;
+            }
+          }
+
+          &.open {
+            .menu-button-burger {
+              background: transparent;
+            }
+          }
+        }
+
+        .overlay-background {
+          background-color: $dark-darkAccent;
+
+          &.open {
+            background-color: $dark-darkAccent;
+          }
+        }
+      }
+    }
+  }
+}

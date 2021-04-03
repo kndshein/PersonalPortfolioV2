@@ -7,9 +7,11 @@
 
   .social-links {
     margin-bottom: 15px;
+
     ul {
       display: flex;
       justify-content: space-around;
+
       li {
         list-style-type: none;
         margin: 0 10px 0 10px;
@@ -36,5 +38,31 @@
     text-align: center;
     font-size: 1rem;
     line-height: 1.3rem;
+  }
+}
+
+body.dark {
+  .footer {
+    .social-links {
+      ul {
+        li {
+          a {
+            svg {
+              fill: $dark-darkAccent;
+            }
+
+            &:hover {
+              svg {
+                fill: $dark-primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-text {
+      color: $dark-darkAccent;
+    }
   }
 }
