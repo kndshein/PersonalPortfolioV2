@@ -1,6 +1,8 @@
 import React from "react";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 
+import ThemeToggler from "./themetoggler";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -33,6 +35,7 @@ export default function Footer() {
               <GrMedium />
             </a>
           </li>
+          <ThemeToggler />
         </ul>
       </div>
       <div className="footer-text">

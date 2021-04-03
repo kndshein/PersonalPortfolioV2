@@ -73,3 +73,15 @@
     }
   }
 }
+
+body.dark {
+  .snap-gallery-page {
+    .gallery-title {
+      color: $dark-primaryColor;
+
+      span {
+        color: $dark-accent;
+      }
+    }
+  }
+}

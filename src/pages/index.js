@@ -6,7 +6,7 @@ import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 import SEO from "../components/seo";
-import ThemeToggle from "../components/themetoggler";
+import ThemeToggler from "../components/themetoggler";
 
 const HomePage = ({ data }) => {
   // console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
@@ -171,7 +171,7 @@ const HomePage = ({ data }) => {
                 <GrMedium />
               </a>
             </li>
-            <ThemeToggle />
+            <ThemeToggler />
           </ul>
         </div>
       </div>
