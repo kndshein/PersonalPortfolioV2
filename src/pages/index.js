@@ -128,19 +128,19 @@ const HomePage = ({ data }) => {
             cursor={{ blink: true, element: "." }}
           >
             <span>Front-End Developer</span>
-            <Typist.Backspace count={19} delay={800} />
+            <Typist.Backspace count={19} delay={700} />
             <span>Graphic Designer</span>
-            <Typist.Backspace count={16} delay={500} />
+            <Typist.Backspace count={16} delay={700} />
             <span>Keyboard Enthusiast</span>
-            <Typist.Backspace count={19} delay={500} />
+            <Typist.Backspace count={19} delay={700} />
             <span>Chemist</span>
-            <Typist.Backspace count={7} delay={800} />
+            <Typist.Backspace count={7} delay={700} />
+            <span>Aspiring Minimalist</span>
+            <Typist.Backspace count={19} delay={700} />
             <span>Avid Gamer</span>
-            <Typist.Backspace count={10} delay={800} />
-            <span>Minimalist</span>
-            <Typist.Backspace count={10} delay={800} />
+            <Typist.Backspace count={10} delay={700} />
             <span>Aquarium Admirer</span>
-            <Typist.Backspace count={16} delay={500} />
+            <Typist.Backspace count={16} delay={700} />
             <span>Full-Stack Developer</span>
           </Typist>
           <ul>

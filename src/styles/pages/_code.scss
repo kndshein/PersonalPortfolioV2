@@ -12,13 +12,19 @@
   }
 
   .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-flow: row wrap;
     gap: max(2vw, 20px);
+
+    &:after {
+      content: "";
+      flex: 1 1 400px;
+    }
 
     .card-container {
       cursor: pointer;
       position: relative;
+      flex: 1 1 400px;
       height: 300px;
 
       .card-title {

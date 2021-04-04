@@ -1,5 +1,6 @@
 .about-page {
   width: 100%;
+  margin-top: clamp(20px, 3vw, 75px);
 
   #profile-pic {
     display: block;
@@ -7,7 +8,8 @@
     min-width: 200px;
     height: calc(min(15vw, 250px));
     min-height: 200px;
-    margin: 0 auto 3vw auto;
+    margin: 0 auto;
+    margin-bottom: clamp(50px, 3vw, 75px);
     object-fit: cover;
     border: 2px solid $primaryColor;
     border-radius: 50%;
@@ -16,15 +18,17 @@
   .about-text {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: clamp(50px, 5vw, 100px);
 
     h2 {
       text-align: left;
-      font-size: calc(max(4vw, 4rem));
-      line-height: calc(max(4vw, 4.25rem));
+      font-size: clamp(3.25rem, 4vw, 7rem);
+      line-height: clamp(3.5rem, 4vw, 7rem);
       margin-top: 25px;
 
       span {
-        font-size: calc(max(4vw, 4.25rem));
+        font-size: clamp(3.25rem, 4vw, 7rem);
+        line-height: clamp(3.5rem, 4vw, 7rem);
         color: $accent;
 
         &:nth-of-type(2) {
@@ -33,11 +37,21 @@
       }
     }
 
-    p {
+    .brand-statement {
+      font-size: clamp(2rem, 2vw, 2.5rem);
+      margin: 20px 0 20px 0;
+    }
+
+    .bio {
       font-weight: 300;
       font-size: $fontTextFontSize;
       line-height: $fontTextLineHeight;
-      margin: 4rem 0 6rem 0;
+      margin-top: 40px;
+
+      a {
+        font-size: $fontTextFontSize;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -50,14 +64,6 @@
       h2 {
         text-align: center;
       }
-    }
-  }
-}
-
-@media only screen and (min-width: $desktopSize) {
-  .about-page {
-    .about-text {
-      width: 75%;
     }
   }
 }

@@ -75,16 +75,17 @@ body {
 }
 
 body.dark {
+  color: $dark-primaryColor;
   background-color: $dark-secondaryColor;
 
   a {
-    color: $dark-accent;
+    color: $dark-primaryColor;
     text-decoration: none;
     &:hover {
       color: $dark-liteAccent;
     }
     &:active {
-      color: $dark-accent;
+      color: $dark-primaryColor;
     }
   }
 }

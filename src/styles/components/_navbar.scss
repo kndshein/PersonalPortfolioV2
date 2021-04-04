@@ -140,11 +140,11 @@ body.dark {
       #mobile-nav {
         .menu-button {
           .menu-button-burger {
-            background: $dark-liteAccent;
+            background: $dark-primaryColor;
 
             &::before,
             &::after {
-              background: $dark-liteAccent;
+              background: $dark-primaryColor;
             }
           }
 
