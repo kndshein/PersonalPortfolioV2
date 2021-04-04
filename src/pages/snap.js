@@ -16,6 +16,7 @@ const SnapPage = ({ data }) => {
             const image = gallery.node.images.filter(
               (image) => image.title === gallery.node.coverImage
             );
+            console.log(image);
             return (
               <Link
                 to={`${gallery.node.slug}`}
@@ -28,8 +29,8 @@ const SnapPage = ({ data }) => {
                       <div className="image-container">
                         <GatsbyImage
                           className="image"
-                          image={image[0].gatsbyImageData}
-                          alt={image[0].description}
+                          image={image[0]?.gatsbyImageData}
+                          alt={image[0]?.description}
                         />
                       </div>
                     </div>
