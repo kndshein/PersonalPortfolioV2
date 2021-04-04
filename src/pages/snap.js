@@ -16,7 +16,6 @@ const SnapPage = ({ data }) => {
             const image = gallery.node.images.filter(
               (image) => image.title === gallery.node.coverImage
             );
-            console.log(image);
             return (
               <Link
                 to={`${gallery.node.slug}`}
