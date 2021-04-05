@@ -2,10 +2,10 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: `Kaung Nan Dar Shein Personal Portfolio`,
-    description: `Full-Stack Developer, Graphic Designer, and former Chemist. Kaung Nan Dar Shein is originally from Yangon, Myanmar, currently based out of NYC.`,
+    title: `Kaung Nan Dar Shein Portfolio`,
+    description: `NYC-based Full-Stack Developer and Graphic Designer, Kaung Nan Dar Shein is stroking his own ego by displaying his work in a portfolio for the world to see.`,
     url: "https://knds.art",
-    image: `http://images.ctfassets.net/d4v7dy300qaq/4aTb8Bdb9CeU6QNlPN2hy/2fb362a3a61b3377207f3e55b265e6d8/IMG_0909.JPG`,
+    image: `https://images.ctfassets.net/d4v7dy300qaq/4aTb8Bdb9CeU6QNlPN2hy/2fb362a3a61b3377207f3e55b265e6d8/IMG_0909.JPG`,
     author: `Kaung Nan Dar Shein`,
   },
   plugins: [
