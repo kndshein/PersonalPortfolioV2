@@ -30,7 +30,6 @@ const AboutPage = () => {
             look with maximum effort.
           </div>
           <div className="bio">
-            Here's the rest of my bio with less of a stick up my you-know-where:
             I am a full-stack developer with a passion for design. My background
             is in Biochemistry and Studio Art, the former I pursued as a pre-med
             student.
