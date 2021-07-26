@@ -3,14 +3,14 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const DesignGallery = ({ data }) => {
   // console.log(data);
   return (
     <>
       <Layout>
-        <SEO title={data.gallery.galleryTitle} />
+        <Seo title={data.gallery.galleryTitle} />
         <div className="design-gallery">
           <div className="gallery-title">
             <span>DESIGN:</span>

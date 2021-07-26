@@ -3,12 +3,12 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const SnapPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="I Snap" />
+      <Seo title="I Snap" />
       <div className="snap-page">
         <div className="page-title">Snap</div>
         <div className="cards-container">

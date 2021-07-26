@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 import { motion } from "framer-motion";
 
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import ThemeToggler from "../components/themetoggler";
 
 const HomePage = ({ data }) => {
@@ -50,7 +50,7 @@ const HomePage = ({ data }) => {
         duration: 0.2,
       }}
     >
-      <SEO title="Home" />
+      <Seo title="Home" />
       <div className="homepage-container">
         <div className="links-container">
           <div className="logo-container">

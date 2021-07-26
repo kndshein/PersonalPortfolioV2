@@ -3,13 +3,13 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const DesignPage = ({ data }) => {
   // console.log(data);
   return (
     <Layout>
-      <SEO title="I Design" />
+      <Seo title="I Design" />
       <div className="design-page">
         <div className="page-title">Design</div>
         <div className="cards-container">

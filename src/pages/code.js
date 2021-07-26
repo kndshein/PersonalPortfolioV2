@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Modal from "../components/modal";
 
 const CodePage = ({ data }) => {
@@ -29,7 +29,7 @@ const CodePage = ({ data }) => {
         handleModal={handleModal}
       />
       <Layout>
-        <SEO title="I Code" />
+        <Seo title="I Code" />
         <div className="code-page">
           <div className="code-title">Code</div>
           <div className="cards-container">

@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const SnapGallery = ({ data }) => {
   const [images] = React.useState([]);
@@ -18,7 +18,7 @@ const SnapGallery = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={data.gallery.galleryTitle} />
+      <Seo title={data.gallery.galleryTitle} />
       <div className="snap-gallery-page">
         <div className="gallery-title">
           <span>SNAP:</span>

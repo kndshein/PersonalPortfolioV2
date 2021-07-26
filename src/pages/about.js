@@ -1,13 +1,13 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Form from "../components/form";
 
 const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="I am" />
+      <Seo title="I am" />
       <div className="about-page">
         <div className="about-text">
           <img
