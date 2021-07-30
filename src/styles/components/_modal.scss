@@ -26,13 +26,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin: 10px;
+    margin: 15px;
     cursor: pointer;
   }
 
   .card-container {
     z-index: 1;
-    width: clamp(300px, 40vw, 600px);
+    width: clamp(350px, 60vw, 700px);
 
     .title {
       z-index: 1;
@@ -55,8 +55,15 @@
     }
 
     .text-container {
-      padding: 20px;
+      padding: 25px;
       background-color: $secondaryColor;
+
+      .construction-text {
+        font-size: 1.25rem;
+        color: yellow;
+        opacity: 0.7;
+        margin-bottom: 10px;
+      }
 
       .technologies {
         display: flex;
@@ -65,7 +72,7 @@
 
         span {
           padding: 7px;
-          margin: 0 10px 10px 0;
+          margin: 0px 10px 10px 0;
           background-color: $liteAccent;
           border-radius: 5px;
         }
@@ -89,7 +96,7 @@
         }
 
         .features-list {
-          margin-left: 20px;
+          margin-left: 15px;
           li {
             list-style-type: circle;
             font-family: $fontText;
@@ -139,6 +146,7 @@ body.dark {
           span {
             color: $dark-liteAccent;
             background-color: $dark-darkAccent;
+            opacity: 0.5;
           }
         }
 

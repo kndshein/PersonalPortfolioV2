@@ -2,9 +2,6 @@ import React from "react";
 import { MdClose, MdOpenInNew } from "react-icons/md";
 
 const Modal = ({ cardData, showModal, handleModal }) => {
-  // console.log(cardData);
-  // console.log("modal", showModal);
-
   return (
     <>
       {showModal && (
@@ -31,6 +28,11 @@ const Modal = ({ cardData, showModal, handleModal }) => {
               </video>
             </div>
             <div className="text-container">
+              {!cardData.links.Livelink && (
+                <div className="construction-text">
+                  Project currently under construction.
+                </div>
+              )}
               <div className="technologies">
                 {cardData.technologies.Technologies.map((technology, index) => {
                   return <span key={index}>{technology}</span>;
@@ -46,15 +48,18 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                 </ul>
               </div>
               <div className="links">
-                <a
-                  className="live-link"
-                  href={cardData.links.Livelink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Visit Website {"  "}
-                  <MdOpenInNew size={15} style={{ marginLeft: "5px" }} />
-                </a>
+                {cardData.links.Livelink && (
+                  <a
+                    className="live-link"
+                    href={cardData.links.Livelink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Visit Website
+                    {"  "}
+                    <MdOpenInNew size={15} style={{ marginLeft: "5px" }} />
+                  </a>
+                )}
                 <a
                   className="github-link"
                   href={cardData.links.GitHub}
