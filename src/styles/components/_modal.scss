@@ -60,7 +60,7 @@
 
       .construction-text {
         font-size: 1.25rem;
-        color: yellow;
+        color: rgb(182, 12, 12);
         opacity: 0.7;
         margin-bottom: 10px;
       }
@@ -141,6 +141,10 @@ body.dark {
     .card-container {
       .text-container {
         background-color: $dark-secondaryColor;
+
+        .construction-text {
+          color: #ffc400;
+        }
 
         .technologies {
           span {
