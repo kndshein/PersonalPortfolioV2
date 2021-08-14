@@ -19,7 +19,6 @@ const options = {
 };
 
 const AboutPage = ({ data }) => {
-  console.log("about", data);
   return (
     <Layout>
       <Seo title="I am" />
