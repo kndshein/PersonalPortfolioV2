@@ -69,7 +69,11 @@ const AboutPage = ({ data }) => {
         <div className="entries-container">
           {data.entries.edges.map((entry, index) => {
             return (
-              <div key={index} className="entry">
+              <div
+                key={index}
+                className="entry"
+                id={entry.node.highlight ? "highlight" : ""}
+              >
                 <div className="date">
                   <span className="month">{entry.node.month}</span>
                   <span className="year bold">{entry.node.year}</span>
@@ -118,6 +122,7 @@ export const pageQuery = graphql`
           }
           month
           year
+          highlight
         }
       }
     }

@@ -64,26 +64,24 @@
 
     .entry {
       display: flex;
-      flex-flow: column;
+      flex-flow: row;
       align-items: center;
-      width: 100%;
+      width: 80%;
       margin-bottom: 30px;
 
       &:nth-of-type(2n) {
         color: $dark-accent;
         .event-container {
-          // background-color: black;
           border: 2px $accent solid;
         }
       }
 
       .date {
         display: flex;
-        justify-content: flex-start;
-        margin-right: 0px;
+        justify-content: flex-end;
+        margin-right: 25px;
         margin-bottom: 5px;
-        width: 100%;
-        // min-width: 90px;
+        width: 10%;
 
         .year {
           font-size: 1.5rem;
@@ -101,7 +99,7 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 90%;
         border: 2px black solid;
         padding: 10px 15px;
 
@@ -134,6 +132,13 @@
   }
 }
 
+#highlight {
+  color: $salmon;
+  .event-container {
+    border: 2px $salmon solid;
+  }
+}
+
 @import "../components/form";
 
 @media only screen and (min-width: $mobileSize) {
@@ -143,18 +148,24 @@
         text-align: center;
       }
     }
+  }
+}
 
+@media only screen and (max-width: $tabletSize) {
+  .about-page {
     .entries-container {
       .entry {
-        flex-flow: row;
-        width: 80%;
+        flex-flow: column;
+        width: 100%;
+
         .date {
-          justify-content: flex-end;
-          margin-right: 25px;
-          width: 10%;
+          justify-content: flex-start;
+          margin-right: 0px;
+          width: 100%;
         }
+
         .event-container {
-          width: 90%;
+          width: 100%;
         }
       }
     }
