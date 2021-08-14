@@ -65,7 +65,6 @@ const AboutPage = ({ data }) => {
             that'll tell you more about myself better than I can.
           </div>
         </div>
-        <Form />
         <div className="entries-container">
           {data.entries.edges.map((entry, index) => {
             return (
@@ -103,6 +102,7 @@ const AboutPage = ({ data }) => {
             );
           })}
         </div>
+        <Form />
       </div>
     </Layout>
   );
