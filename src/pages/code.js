@@ -19,8 +19,6 @@ const CodePage = ({ data }) => {
     }
   };
 
-  // console.log("code", showModal);
-
   return (
     <>
       <Modal

@@ -1,10 +1,25 @@
 import React from "react";
+import { graphql } from "gatsby";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { MARKS } from "@contentful/rich-text-types";
+import { MdOpenInNew } from "react-icons/md";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Form from "../components/form";
 
-const AboutPage = () => {
+const Bold = ({ children }) => <span className="bold">{children}</span>;
+const Italic = ({ children }) => <span className="italic">{children}</span>;
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    [MARKS.ITALIC]: (text) => <Italic>{text}</Italic>,
+  },
+};
+
+const AboutPage = ({ data }) => {
+  console.log("about", data);
   return (
     <Layout>
       <Seo title="I am" />
@@ -51,9 +66,60 @@ const AboutPage = () => {
           </div>
         </div>
         <Form />
+        <div className="entries-container">
+          {data.entries.edges.map((entry, index) => {
+            return (
+              <div key={index} className="entry">
+                <div className="date">
+                  <span className="month">{entry.node.month}</span>
+                  <span className="year bold">{entry.node.year}</span>
+                </div>
+                <div className="event-container">
+                  <div className="event">
+                    <div className={`${entry.node.link ? "margin" : ""}`}>
+                      {renderRichText(entry.node.event, options)}
+                    </div>{" "}
+                    {entry.node.link && (
+                      <a
+                        className="learn-more"
+                        href={entry.node.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Learn More
+                        <MdOpenInNew size={20} style={{ marginLeft: "5px" }} />
+                      </a>
+                    )}
+                  </div>
+                  {entry.node.duration && (
+                    <div className="duration">{entry.node.duration}</div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );
 };
 
 export default AboutPage;
+
+export const pageQuery = graphql`
+  query {
+    entries: allContentfulAboutMeTimeline(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          link
+          duration
+          event {
+            raw
+          }
+          month
+          year
+        }
+      }
+    }
+  }
+`;

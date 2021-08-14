@@ -45,7 +45,6 @@ h5,
 h6 {
   font-family: $fontTitle;
   font-weight: 600;
-  // line-height: 3rem;
 }
 
 html {
@@ -71,6 +70,14 @@ body {
     &:active {
       color: $primaryColor;
     }
+  }
+
+  .bold {
+    font-weight: 500;
+  }
+
+  .italic {
+    font-style: italic;
   }
 }
 
