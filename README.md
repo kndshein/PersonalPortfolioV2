@@ -11,3 +11,7 @@ An online portfolio showcasing my multidisciplinary work. A little egotistical. 
 - Gatsby (React)
 - Contentful
 - Framer
+
+### Fonts
+- [Bebas Neue Pro](https://fonts.adobe.com/fonts/bebas-neue-pro)
+- [Roboto](https://fonts.google.com/specimen/Roboto)
