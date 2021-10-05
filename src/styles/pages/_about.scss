@@ -38,15 +38,23 @@
     }
 
     .brand-statement {
-      font-size: clamp(2rem, 2vw, 2.5rem);
+      font-size: clamp(1.75rem, 2vw, 2.25rem);
+      line-height: clamp(2.5rem, 3vw, 3rem);
+      padding: 20px;
       margin: 20px 0 20px 0;
+      background-color: $liteAccent;
+
+      &.second {
+        background: none;
+        margin-bottom: 40px;
+        color: $accent;
+        border: 2px solid lighten($accent, 10%);
+      }
     }
 
     .bio {
-      font-weight: 300;
       font-size: $fontTextFontSize;
       line-height: $fontTextLineHeight;
-      margin-top: 40px;
 
       a {
         font-size: $fontTextFontSize;
@@ -67,19 +75,20 @@
       flex-flow: row;
       align-items: center;
       width: 80%;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      font-weight: 300;
 
       &:nth-of-type(2n) {
         color: $dark-accent;
         .event-container {
-          border: 2px $accent solid;
+          border: 1px $accent solid;
         }
       }
 
       .date {
         display: flex;
         justify-content: flex-end;
-        margin-right: 25px;
+        margin-right: 20px;
         margin-bottom: 5px;
         width: 10%;
 
@@ -100,8 +109,8 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        border: 2px black solid;
-        padding: 10px 15px;
+        border: 1px black solid;
+        padding: 7px 15px;
 
         p,
         span {
@@ -135,7 +144,7 @@
 #highlight {
   color: $salmon;
   .event-container {
-    border: 2px $salmon solid;
+    border: 1px $salmon solid;
   }
 }
 
@@ -175,7 +184,7 @@
 body.dark {
   .about-page {
     #profile-pic {
-      border: 2px solid $dark-primaryColor;
+      border: 1px solid $dark-primaryColor;
     }
 
     .about-text {
@@ -190,6 +199,15 @@ body.dark {
       p {
         color: $dark-primaryColor;
       }
+
+      .brand-statement {
+        background-color: darken($dark-darkAccent, 10%);
+        &.second {
+          background: none;
+          color: $dark-accent;
+          border: 2px solid $dark-accent;
+        }
+      }
     }
 
     .entries-container {
@@ -197,13 +215,13 @@ body.dark {
         &:nth-of-type(2n) {
           color: $dark-liteAccent;
           .event-container {
-            border: 2px $dark-darkAccent solid;
+            border: 1px $dark-darkAccent solid;
           }
         }
       }
 
       .event-container {
-        border: 2px $dark-primaryColor solid;
+        border: 1px $dark-primaryColor solid;
       }
     }
   }

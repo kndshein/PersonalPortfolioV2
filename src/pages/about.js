@@ -43,17 +43,21 @@ const AboutPage = ({ data }) => {
             balance of form and function. Constantly striving for a “no-effort”
             look with maximum effort.
           </div>
+          <div className="bio">Or as my friend puts it...</div>
+          <div className="brand-statement second">
+            Full-stack developer suffering from impostor syndrome who builds
+            sites through the lens of over-thinking. Driven by OCD. Occasionally
+            striving for well-thought through look, but also sometimes just
+            wanting to do things that aren't viewed as pretentious in his mind.
+          </div>
           <div className="bio">
-            I am a full-stack developer with a passion for design. My background
-            is in Biochemistry and Studio Art, the former I pursued as a pre-med
-            student.
-            <br />
-            <br />I love tech, gadgets, and a good bagel, egg, and cheese. I am
-            obsessed with self-improvement, minimalist aesthetics, and
-            mechanical keyboards -- all very costly things I can't afford. In my
-            free time, you can find me putting games in my wishlist but not
-            actually playing them. As I realize that this bio has gotten far too
-            similar to a dating profile, here's{" "}
+            My background is in Biochemistry and Studio Art, the former I
+            pursued as a pre-med student. I love tech, gadgets, and a good
+            bagel, egg, and cheese. I am obsessed with self-improvement,
+            minimalist aesthetics, and mechanical keyboards -- all very costly
+            things I can't afford. In my free time, you can find me putting
+            games in my wishlist but not actually playing them. As I realize
+            that this bio has gotten far too similar to a dating profile, here's{" "}
             <a
               href="https://medium.com/the-haven/my-hate-hate-relationship-with-vinegar-b627593cf96"
               target="_blank"
