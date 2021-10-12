@@ -9,37 +9,10 @@ import Seo from "../components/seo";
 import ThemeToggler from "../components/themetoggler";
 
 const HomePage = ({ data }) => {
-  // console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
-  var num = [],
-    num2 = [],
-    i = 0,
-    j = 0,
-    len = 75,
-    len2 = 120;
-  while (++i <= len) num.push(i);
-  while (++j <= len2) num2.push(i);
+  console.log(data.allContentfulAsset.edges);
 
-  // const container = {
-  //   initial: { opacity: 0 },
-  //   animate: {
-  //     opacity: 1,
-  //     transition: {
-  //       delayChildren: 0.3,
-  //       staggerChildren: 0.3,
-  //       // staggerDirection: -1,
-  //     },
-  //   },
-  // };
-
-  // const children = {
-  //   initial: { height: 0 },
-  //   animate: {
-  //     height: "100%",
-  //     transition: {
-  //       duration: 0.3,
-  //     },
-  //   },
-  // };
+  let num = [...new Array(75).fill(1)],
+    num2 = [...new Array(120).fill(1)];
 
   return (
     <motion.main
