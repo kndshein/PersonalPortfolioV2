@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .snap-page {
   .page-title {
     display: flex;
@@ -21,7 +23,7 @@
       position: relative;
       display: block;
       margin-right: 4%;
-      width: (92% / 3);
+      width: math.div(92%, 3);
       text-decoration: none;
       margin-bottom: max(4%, 20px);
 
