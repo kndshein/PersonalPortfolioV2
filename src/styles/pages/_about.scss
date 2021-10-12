@@ -2,7 +2,7 @@
   width: 100%;
   margin-top: clamp(20px, 3vw, 75px);
 
-  #profile-pic {
+  .profile-pic {
     display: block;
     width: calc(min(15vw, 250px));
     min-width: 200px;
@@ -183,7 +183,7 @@
 
 body.dark {
   .about-page {
-    #profile-pic {
+    .profile-pic {
       border: 1px solid $dark-primaryColor;
     }
 

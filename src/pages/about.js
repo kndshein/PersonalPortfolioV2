@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { MARKS } from "@contentful/rich-text-types";
 import { MdOpenInNew } from "react-icons/md";
@@ -24,14 +25,14 @@ const AboutPage = ({ data }) => {
       <Seo title="I am" />
       <div className="about-page">
         <div className="about-text">
-          <img
-            id="profile-pic"
-            src="https://res.cloudinary.com/kndshein/image/upload/c_crop,g_north,h_867,w_734/v1609575414/Project%20One/About/IMG_0469_tdsdwo.jpg"
-            alt="Selfie of Kaung"
+          <GatsbyImage
+            className="profile-pic"
+            image={data.profilepic.edges[0].node.gatsbyImageData}
+            alt={data.profilepic.edges[0].node.description}
+            title={data.profilepic.edges[0].node.description}
           />
           <h2>
             Yello! My name is Kaung,
-            {/* <br /> */}
             <div>
               <span>pronounced like King </span>
               <span>Kong.</span>
@@ -114,7 +115,7 @@ const AboutPage = ({ data }) => {
 export default AboutPage;
 
 export const pageQuery = graphql`
-  query {
+  {
     entries: allContentfulAboutMeTimeline(sort: { fields: order, order: ASC }) {
       edges {
         node {
@@ -126,6 +127,16 @@ export const pageQuery = graphql`
           month
           year
           highlight
+        }
+      }
+    }
+    profilepic: allContentfulAsset(
+      filter: { title: { eq: "About Me Profile Picture" } }
+    ) {
+      edges {
+        node {
+          description
+          gatsbyImageData(quality: 50, formats: [JPG], layout: FULL_WIDTH)
         }
       }
     }
