@@ -9,7 +9,7 @@ import Seo from "../components/seo";
 import ThemeToggler from "../components/themetoggler";
 
 const HomePage = ({ data }) => {
-  console.log(data.allContentfulAsset.edges);
+  // console.log(data.allContentfulAsset.edges[0].node.gatsbyImageData);
 
   let num = [...new Array(75).fill(1)],
     num2 = [...new Array(120).fill(1)];
