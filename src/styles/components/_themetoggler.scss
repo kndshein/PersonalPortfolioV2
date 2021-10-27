@@ -12,8 +12,10 @@
       fill: $dark-secondaryColor;
     }
   }
+}
 
-  &.dark {
+body.dark {
+  .theme-toggler {
     &:hover {
       svg {
         fill: $dark-primaryColor;
