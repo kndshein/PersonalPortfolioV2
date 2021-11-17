@@ -6,7 +6,6 @@ const ThemeToggle = () => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }) => {
-        console.log("theme", theme);
         return (
           <div
             className="theme-toggler"
