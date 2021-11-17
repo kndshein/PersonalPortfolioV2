@@ -44,7 +44,17 @@ const AboutPage = ({ data }) => {
             balance of form and function. Constantly striving for a “no-effort”
             look with maximum effort.
           </div>
-          <div className="bio">Or as my friend puts it...</div>
+          <div className="bio">
+            Or as my{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://dougleinen.com/"
+            >
+              friend
+            </a>{" "}
+            puts it...
+          </div>
           <div className="brand-statement second">
             Full-stack developer suffering from impostor syndrome who builds
             sites through the lens of over-thinking. Driven by OCD. Occasionally
@@ -55,10 +65,10 @@ const AboutPage = ({ data }) => {
             My background is in Biochemistry and Studio Art, the former I
             pursued as a pre-med student. I love tech, gadgets, and a good
             bagel, egg, and cheese. I am obsessed with self-improvement,
-            minimalist aesthetics, and mechanical keyboards -- all very costly
-            things I can't afford. In my free time, you can find me putting
-            games in my wishlist but not actually playing them. As I realize
-            that this bio has gotten far too similar to a dating profile, here's{" "}
+            minimalism, and mechanical keyboards -- all very costly things I
+            can't afford. In my free time, you can find me putting games in my
+            wishlist but not actually playing them. As I realize that this bio
+            has gotten far too similar to a dating profile, here's{" "}
             <a
               href="https://medium.com/the-haven/my-hate-hate-relationship-with-vinegar-b627593cf96"
               target="_blank"
