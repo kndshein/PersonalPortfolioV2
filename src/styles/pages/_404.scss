@@ -1,9 +1,7 @@
 .error-page {
   margin: 50px 0 50px 0;
 
-  html.dark & {
-    color: white;
-  }
+  @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
 
   .title {
     margin-bottom: 20px;
@@ -13,9 +11,7 @@
     font-size: 6rem;
     line-height: 5.5rem;
 
-    html.dark & {
-      color: white;
-    }
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
 
     div {
       color: $accent;
