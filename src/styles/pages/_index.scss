@@ -80,11 +80,11 @@
           display: none;
           height: 100%;
           word-wrap: break-word;
-          line-height: calc(max(2vw, 1.5rem));
+          line-height: clamp(2rem, 2vw, 3rem);
 
           span {
             font-weight: 300;
-            font-size: calc(max(1.75vw, 2rem));
+            font-size: clamp(2rem, 1.75vw, 3.25rem);
 
             &:nth-child(2n) {
               color: $accent;
