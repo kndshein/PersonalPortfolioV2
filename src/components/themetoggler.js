@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IoMoonSharp } from "react-icons/io5";
 
 const ThemeToggler = () => {
