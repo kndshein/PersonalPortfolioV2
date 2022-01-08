@@ -27,7 +27,7 @@
 
       .active {
         font-style: oblique;
-        color: $primaryColor;
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
       }
 
       a {
@@ -35,8 +35,8 @@
         padding: 8px;
         text-decoration: none;
         font-size: 3rem;
-        color: $accent;
         display: block;
+        @include darkThemeHelper(color, $accent, $dark-accent);
       }
     }
   }
@@ -44,22 +44,5 @@
   &.open {
     opacity: 1;
     visibility: visible;
-    // transition: opacity 1s ease-in-out;
-  }
-}
-
-body.dark {
-  .overlay {
-    .overlay-content {
-      li {
-        .active {
-          color: $dark-primaryColor;
-        }
-
-        a {
-          color: $dark-accent;
-        }
-      }
-    }
   }
 }

@@ -13,7 +13,7 @@
         li {
           .active {
             font-style: oblique;
-            color: $primaryColor;
+            @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
           }
 
           a {
@@ -22,36 +22,18 @@
             font-weight: 500;
             font-size: 1.5rem;
             font-style: normal;
-            color: $accent;
+            @include darkThemeHelper(color, $accent, $dark-accent);
 
             &:hover {
-              color: $primaryColor;
+              @include darkThemeHelper(
+                color,
+                $primaryColor,
+                $dark-primaryColor
+              );
             }
 
             &:active {
-              color: $accent;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-body.dark {
-  .navbar-container {
-    .navbar {
-      .navbar-links {
-        li {
-          .active {
-            color: $dark-primaryColor;
-          }
-
-          a {
-            color: $dark-accent;
-
-            &:hover {
-              color: $dark-primaryColor;
+              @include darkThemeHelper(color, $darkAccent, $dark-liteAccent);
             }
           }
         }

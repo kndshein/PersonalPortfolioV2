@@ -5,7 +5,11 @@
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: $secondaryColor;
+  @include darkThemeHelper(
+    background-color,
+    $secondaryColor,
+    $dark-secondaryColor
+  );
 
   #logo {
     text-transform: uppercase;
@@ -13,10 +17,10 @@
     font-weight: 600;
     font-size: $logoFontSize;
     line-height: $logoLineHeight;
-    color: $primaryColor;
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
 
     &:hover {
-      color: $accent;
+      @include darkThemeHelper(color, $accent, $dark-liteAccent);
     }
   }
 
@@ -51,9 +55,13 @@
         .menu-button-burger {
           width: 20px;
           height: 4px;
-          background: $primaryColor;
           border-radius: 2px;
           transition: 0.1s ease-in-out;
+          @include darkThemeHelper(
+            background,
+            $primaryColor,
+            $dark-primaryColor
+          );
 
           &::before,
           &::after {
@@ -61,9 +69,13 @@
             position: absolute;
             width: 15px;
             height: 4px;
-            background: $primaryColor;
             border-radius: 2px;
             transition: 0.1s ease-in-out;
+            @include darkThemeHelper(
+              background,
+              $primaryColor,
+              $dark-primaryColor
+            );
           }
 
           &::before {
@@ -80,8 +92,12 @@
         &.open {
           .menu-button-burger {
             transform: translateX(10px);
-            background: transparent;
             transition: 0.1s ease-in-out;
+            @include darkThemeHelper(
+              background,
+              transparent,
+              transparent
+            ); //Seems like a DRY violation, but it's not. Cost of the Nesting SCSS
 
             &::before {
               transform: rotate(45deg) translate(-9px, 9px);
@@ -104,13 +120,21 @@
         width: 0;
         height: 0;
         border-radius: 50%;
-        background-color: $liteAccent;
         transition: 0.5s ease-in-out;
+        @include darkThemeHelper(
+          background-color,
+          $liteAccent,
+          $dark-darkAccent
+        );
 
         &.open {
           height: 300vmax;
           width: 300vmax;
-          background-color: $liteAccent;
+          @include darkThemeHelper(
+            background-color,
+            $liteAccent,
+            $dark-darkAccent
+          );
         }
       }
     }
@@ -124,63 +148,12 @@
 @import "./navbar-desktop";
 @import "./navbar-mobile";
 
-body.dark {
-  .navbar-container {
-    background-color: $dark-secondaryColor;
-
-    #logo {
-      color: $dark-primaryColor;
-
-      &:hover {
-        color: $dark-liteAccent;
-      }
-    }
-
-    .navbar {
-      #mobile-nav {
-        .menu-button {
-          .menu-button-burger {
-            background: $dark-primaryColor;
-
-            &::before,
-            &::after {
-              background: $dark-primaryColor;
-            }
-          }
-
-          &.open {
-            .menu-button-burger {
-              background: transparent;
-            }
-          }
-        }
-
-        .overlay-background {
-          background-color: $dark-darkAccent;
-
-          &.open {
-            background-color: $dark-darkAccent;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media (hover: none), (hover: on-demand) {
   .navbar-container {
     #logo {
       &:hover {
         color: $primaryColor;
-      }
-    }
-  }
-  body.dark {
-    .navbar-container {
-      #logo {
-        &:hover {
-          color: $dark-primaryColor;
-        }
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
       }
     }
   }
