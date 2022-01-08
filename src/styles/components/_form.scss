@@ -55,7 +55,6 @@
         }
 
         &:focus {
-          border: $primaryColor 2px solid;
           outline: none;
           @include darkThemeHelper(
             border,

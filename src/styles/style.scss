@@ -68,15 +68,22 @@ body {
   animation: fadeInAnimation ease-in-out 0.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
+  @include darkThemeHelper(
+    background-color,
+    $secondaryColor,
+    $dark-secondaryColor
+  );
 
   a {
-    color: $primaryColor;
     text-decoration: none;
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
+
     &:hover {
-      color: $accent;
+      @include darkThemeHelper(color, $accent, $dark-liteAccent);
     }
     &:active {
-      color: $primaryColor;
+      @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
     }
   }
 
@@ -86,42 +93,6 @@ body {
 
   .italic {
     font-style: italic;
-  }
-}
-
-body.dark {
-  color: $dark-primaryColor;
-  background-color: $dark-secondaryColor;
-
-  a {
-    color: $dark-primaryColor;
-    text-decoration: none;
-    &:hover {
-      color: $dark-liteAccent;
-    }
-    &:active {
-      color: $dark-primaryColor;
-    }
-  }
-}
-
-.Typist .Cursor {
-  display: inline-block;
-
-  &--blinking {
-    opacity: 1;
-    animation: blink 1s linear infinite;
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
   }
 }
 
@@ -147,21 +118,10 @@ body.dark {
   body {
     a {
       &:hover {
-        color: $primaryColor;
+        @include darkThemeHelper(color, $primaryColor, $dark-accent);
       }
       &:active {
-        color: $primaryColor;
-      }
-    }
-  }
-
-  body.dark {
-    a {
-      &:hover {
-        color: $dark-accent;
-      }
-      &:active {
-        color: $dark-accent;
+        @include darkThemeHelper(color, $primaryColor, $dark-accent);
       }
     }
   }
