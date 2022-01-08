@@ -20,9 +20,9 @@ exports.onRenderBody = ({ setHeadComponents }) => {
             console.log("Theme updated:", theme);
 
             if (theme === "dark") {
-              document.documentElement.body.className = "dark";
+              document.documentElement.className = "dark";
             } else {
-              document.documentElement.body.className = "";
+              document.documentElement.className = "";
             }
           }
 
