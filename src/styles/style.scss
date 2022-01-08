@@ -31,6 +31,13 @@ $mobileSize: 500px;
 $tabletSize: 768px;
 $desktopSize: 1024px;
 
+@mixin darkThemeHelper($property, $lightColor, $darkColor) {
+  #{$property}: $lightColor;
+  html.dark & {
+    #{$property}: $darkColor;
+  }
+}
+
 * {
   font-size: 12px;
   padding: 0;
