@@ -56,13 +56,17 @@
 
     .text-container {
       padding: 25px;
-      background-color: $secondaryColor;
+      @include darkThemeHelper(
+        background-color,
+        $secondaryColor,
+        $dark-secondaryColor
+      );
 
       .construction-text {
         font-size: 1.25rem;
-        color: rgb(182, 12, 12);
         opacity: 0.7;
         margin-bottom: 10px;
+        @include darkThemeHelper(color, rgb(182, 12, 12), #ffc400);
       }
 
       .technologies {
@@ -73,13 +77,20 @@
         span {
           padding: 7px;
           margin: 0px 10px 10px 0;
-          background-color: $liteAccent;
           border-radius: 5px;
+          @include darkThemeHelper(color, $darkAccent, $dark-primaryColor);
+          @include darkThemeHelper(
+            background-color,
+            $liteAccent,
+            $dark-darkAccent
+          );
+          @include darkThemeHelper(opacity, 1, 0.5);
         }
       }
 
       .description {
         font-size: 1.25rem;
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
       }
 
       .features {
@@ -92,7 +103,7 @@
           font-weight: 600;
           font-style: normal;
           font-size: 2rem;
-          color: $accent;
+          @include darkThemeHelper(color, $accent, $dark-accent);
         }
 
         .features-list {
@@ -104,7 +115,7 @@
             font-style: normal;
             font-size: 1.25rem;
             margin-bottom: 5px;
-            color: $darkAccent;
+            @include darkThemeHelper(color, $darkAccent, $dark-liteAccent);
           }
         }
       }
@@ -119,73 +130,33 @@
           font-weight: 700;
           padding: 10px;
           margin-right: 10px;
-          background-color: $primaryColor;
           border-radius: 5px;
-          color: $secondaryColor;
+          @include darkThemeHelper(
+            color,
+            $secondaryColor,
+            $dark-secondaryColor
+          );
+          @include darkThemeHelper(
+            background-color,
+            $primaryColor,
+            $dark-primaryColor
+          );
 
           &:hover {
-            background-color: $darkAccent;
+            @include darkThemeHelper(
+              background-color,
+              $darkAccent,
+              $dark-liteAccent
+            );
           }
         }
 
         .github-link {
-          background-color: $accent;
-        }
-      }
-    }
-  }
-}
+          @include darkThemeHelper(color, $liteAccent, $dark-liteAccent);
+          @include darkThemeHelper(background-color, $accent, $dark-darkAccent);
 
-body.dark {
-  .modal {
-    .card-container {
-      .text-container {
-        background-color: $dark-secondaryColor;
-
-        .construction-text {
-          color: #ffc400;
-        }
-
-        .technologies {
-          span {
-            color: $dark-liteAccent;
-            background-color: $dark-darkAccent;
-            opacity: 0.5;
-          }
-        }
-
-        .description {
-          color: $dark-primaryColor;
-        }
-
-        .features {
-          .features-title {
-            color: $dark-accent;
-          }
-
-          .features-list {
-            li {
-              color: $dark-liteAccent;
-            }
-          }
-        }
-
-        .links {
-          a {
-            color: $dark-secondaryColor;
-            background-color: $dark-primaryColor;
-
-            &:hover {
-              background-color: $dark-liteAccent;
-            }
-          }
-          .github-link {
-            color: $dark-liteAccent;
-            background-color: $dark-darkAccent;
-
-            &:hover {
-              color: $dark-darkAccent;
-            }
+          &:hover {
+            @include darkThemeHelper(color, $secondaryColor, $dark-darkAccent);
           }
         }
       }
@@ -200,33 +171,20 @@ body.dark {
         .links {
           a {
             &:hover {
-              background-color: $primaryColor;
+              @include darkThemeHelper(
+                background-color,
+                $primaryColor,
+                $dark-primaryColor
+              );
             }
           }
           .github-link {
             &:hover {
-              background-color: $accent;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  body.dark {
-    .modal {
-      .card-container {
-        .text-container {
-          .links {
-            a {
-              &:hover {
-                background-color: $dark-primaryColor;
-              }
-            }
-            .github-link {
-              &:hover {
-                background-color: $dark-liteAccent;
-              }
+              @include darkThemeHelper(
+                background-color,
+                $accent,
+                $dark-liteAccent
+              );
             }
           }
         }
