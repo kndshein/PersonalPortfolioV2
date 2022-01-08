@@ -5,6 +5,7 @@
     font-weight: 400;
     font-size: 3rem;
     margin-bottom: 25px;
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
   }
 
   .about-form {
@@ -24,7 +25,7 @@
         font-weight: 700;
         font-size: 1rem;
         margin-bottom: 10px;
-        color: $darkAccent;
+        @include darkThemeHelper(color, $darkAccent, $dark-liteAccent);
       }
 
       input,
@@ -34,18 +35,33 @@
         font-family: $fontText;
         font-weight: 400;
         font-style: normal;
-        border: $accent 1px solid;
         border-radius: 5px;
         padding: 5px 10px;
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
+        @include darkThemeHelper(
+          border,
+          $accent 1px solid,
+          $dark-darkAccent 1px solid
+        );
+        @include darkThemeHelper(
+          background-color,
+          $secondaryColor,
+          $dark-secondaryColor
+        );
 
         &::placeholder {
           font-style: italic;
-          color: $accent;
+          @include darkThemeHelper(color, $accent, $dark-darkAccent);
         }
 
         &:focus {
           border: $primaryColor 2px solid;
           outline: none;
+          @include darkThemeHelper(
+            border,
+            $primaryColor 2px solid,
+            $dark-liteAccent 2px solid
+          );
         }
       }
 
@@ -60,23 +76,28 @@
       width: 100%;
       font-family: $fontText;
       font-size: 1.2rem;
-      color: $darkAccent;
-      background-color: $liteAccent;
       padding: 10px 10px;
       margin-top: 10px;
       border: none;
       border-radius: 5px;
+      @include darkThemeHelper(color, $darkAccent, $dark-liteAccent);
+      @include darkThemeHelper(background-color, $liteAccent, $dark-darkAccent);
 
       &:hover {
-        background-color: $accent;
         border: none;
+        @include darkThemeHelper(color, $secondaryColor, $dark-secondaryColor);
+        @include darkThemeHelper(background-color, $accent, $dark-liteAccent);
       }
 
       &:active {
-        color: $liteAccent;
-        background-color: $darkAccent;
         border: none;
         outline: none;
+        @include darkThemeHelper(color, $liteAccent, $dark-liteAccent);
+        @include darkThemeHelper(
+          background-color,
+          $darkAccent,
+          $dark-darkAccent
+        );
       }
     }
   }
@@ -92,10 +113,10 @@
       right: 0;
       height: 100%;
       width: 100%;
-      background-color: $liteAccent;
       padding: 30px;
       border-radius: 5px;
       transition: 0.5s ease;
+      @include darkThemeHelper(background-color, $liteAccent, $dark-darkAccent);
     }
   }
 
@@ -107,7 +128,7 @@
       text-align: center;
       font-size: 1.5rem;
       line-height: 2rem;
-      color: $darkAccent;
+      @include darkThemeHelper(color, $darkAccent, $dark-liteAccent);
     }
   }
 }
@@ -137,87 +158,13 @@
 
       #about-form-button {
         grid-area: 3 / 1 / 4 / 4;
-      }
-    }
-  }
-}
-
-body.dark {
-  .about-form-container {
-    h4 {
-      color: $dark-primaryColor;
-    }
-    .about-form {
-      .form-field {
-        label {
-          color: $dark-liteAccent;
-        }
-
-        input,
-        #form-message {
-          color: $dark-primaryColor;
-          border: $dark-darkAccent 1px solid;
-          background-color: $dark-secondaryColor;
-
-          &::placeholder {
-            color: $dark-darkAccent;
-          }
-
-          &:focus {
-            border: $dark-liteAccent 2px solid;
-          }
-        }
-      }
-
-      #about-form-button {
-        color: $dark-liteAccent;
-        background-color: $dark-darkAccent;
-
         &:hover {
-          color: $dark-secondaryColor;
-          background-color: $dark-liteAccent;
-        }
-
-        &:active {
-          color: $dark-liteAccent;
-          background-color: $dark-darkAccent;
-        }
-      }
-    }
-
-    .form-thank {
-      &.clicked {
-        background-color: $dark-darkAccent;
-      }
-    }
-
-    .form-thank-text {
-      &.clicked {
-        color: $dark-liteAccent;
-      }
-    }
-  }
-}
-
-@media (hover: none), (hover: on-demand) {
-  .about-form-container {
-    .about-form {
-      #about-form-button {
-        &:hover {
-          background-color: $liteAccent;
-        }
-      }
-    }
-  }
-
-  body.dark {
-    .about-form-container {
-      .about-form {
-        #about-form-button {
-          &:hover {
-            color: $dark-liteAccent;
-            background-color: $dark-darkAccent;
-          }
+          @include darkThemeHelper(color, $liteAccent, $dark-secondaryColor);
+          @include darkThemeHelper(
+            background-color,
+            $darkAccent,
+            $dark-liteAccent
+          );
         }
       }
     }
