@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Typist from "react-typist";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { GrInstagram, GrLinkedinOption, GrMedium } from "react-icons/gr";
 import { motion } from "framer-motion";
@@ -95,27 +94,9 @@ const HomePage = ({ data }) => {
           </div>
         </div>
         <div className="social-links">
-          <Typist
-            avgTypingDelay={40}
-            stdTypingDelay={0}
-            cursor={{ blink: true, element: "." }}
-          >
-            <span>Front-End Developer</span>
-            <Typist.Backspace count={19} delay={700} />
-            <span>Graphic Designer</span>
-            <Typist.Backspace count={16} delay={700} />
-            <span>Keyboard Enthusiast</span>
-            <Typist.Backspace count={19} delay={700} />
-            <span>Chemist</span>
-            <Typist.Backspace count={7} delay={700} />
-            <span>Aspiring Minimalist</span>
-            <Typist.Backspace count={19} delay={700} />
-            <span>Avid Gamer</span>
-            <Typist.Backspace count={10} delay={700} />
-            <span>Aquarium Admirer</span>
-            <Typist.Backspace count={16} delay={700} />
-            <span>Full-Stack Developer</span>
-          </Typist>
+          <div>
+            <span>Software Developer</span>
+          </div>
           <ul>
             <li>
               <a
