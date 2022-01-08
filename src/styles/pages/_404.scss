@@ -1,6 +1,10 @@
 .error-page {
   margin: 50px 0 50px 0;
 
+  html.dark & {
+    color: white;
+  }
+
   .title {
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -9,12 +13,20 @@
     font-size: 6rem;
     line-height: 5.5rem;
 
+    html.dark & {
+      color: white;
+    }
+
     div {
       color: $accent;
       text-transform: uppercase;
       font-family: $fontTitle;
       font-weight: 700;
       font-size: 6rem;
+
+      html.dark & {
+        color: $dark-accent;
+      }
     }
   }
 
@@ -24,19 +36,6 @@
     a {
       text-decoration: underline;
       font-size: clamp(2rem, 3vw, 3rem);
-    }
-  }
-}
-
-body.dark {
-  .error-page {
-    color: white;
-    .title {
-      color: white;
-
-      div {
-        color: $dark-accent;
-      }
     }
   }
 }

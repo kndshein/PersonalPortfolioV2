@@ -23,7 +23,7 @@
       position: relative;
       display: block;
       margin-right: 4%;
-      width: math.div(92%, 3);
+      width: calc(92% / 3);
       text-decoration: none;
       margin-bottom: max(4%, 20px);
 

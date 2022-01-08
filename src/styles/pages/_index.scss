@@ -9,7 +9,8 @@
   padding: 20px;
   margin: 0 auto;
   height: 100vh;
-  width: min(#{$viewSize}, 100vw);
+  width: 100vw;
+  max-width: $viewSize;
   transform: translate(-50%, 0);
 
   .links-container {
