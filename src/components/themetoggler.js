@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMoonSharp } from "react-icons/io5";
 
 const ThemeToggler = () => {
-  const [darkTheme, setDarkTheme] = useState(window.__theme !== "dark");
-
-  if (typeof window === "undefined") {
-    return null;
-  }
+  const [darkTheme, setDarkTheme] = useState(
+    typeof window !== "undefined" && window.__theme !== "dark"
+  );
 
   const toggleHandler = () => {
     setDarkTheme(!darkTheme);
