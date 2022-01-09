@@ -11,8 +11,12 @@
     margin: 0 auto;
     margin-bottom: clamp(50px, 3vw, 75px);
     object-fit: cover;
-    border: 2px solid $primaryColor;
     border-radius: 50%;
+    @include darkThemeHelper(
+      border,
+      2px solid $primaryColor,
+      1px solid $dark-primaryColor
+    );
   }
 
   .about-text {
@@ -25,11 +29,12 @@
       font-size: clamp(3.25rem, 4vw, 7rem);
       line-height: clamp(3.5rem, 4vw, 7rem);
       margin-top: 25px;
+      @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
 
       span {
         font-size: clamp(3.25rem, 4vw, 7rem);
         line-height: clamp(3.5rem, 4vw, 7rem);
-        color: $accent;
+        @include darkThemeHelper(color, $accent, $dark-accent);
 
         &:nth-of-type(2) {
           font-style: oblique;
@@ -37,18 +42,30 @@
       }
     }
 
+    p {
+      @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
+    }
+
     .brand-statement {
       font-size: clamp(1.75rem, 2vw, 2.25rem);
       line-height: clamp(2.5rem, 3vw, 3rem);
       padding: 20px;
       margin: 20px 0 20px 0;
-      background-color: $liteAccent;
+      @include darkThemeHelper(
+        background-color,
+        $liteAccent,
+        darken($dark-darkAccent, 10%)
+      );
 
       &.second {
-        background: none;
         margin-bottom: 40px;
-        color: $accent;
-        border: 2px solid lighten($accent, 10%);
+        @include darkThemeHelper(background, none, none);
+        @include darkThemeHelper(color, $accent, $dark-accent);
+        @include darkThemeHelper(
+          border,
+          2px solid lighten($accent, 10%),
+          2px solid $dark-accent
+        );
       }
     }
 
@@ -79,9 +96,13 @@
       font-weight: 300;
 
       &:nth-of-type(2n) {
-        color: $dark-accent;
+        @include darkThemeHelper(color, $dark-accent, $dark-liteAccent);
         .event-container {
-          border: 1px $accent solid;
+          @include darkThemeHelper(
+            border,
+            1px $accent solid,
+            1px $dark-darkAccent solid
+          );
         }
       }
 
@@ -109,8 +130,12 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        border: 1px black solid;
         padding: 7px 15px;
+        @include darkThemeHelper(
+          border,
+          1px $primaryColor solid,
+          1px $dark-primaryColor solid
+        );
 
         p,
         span {
@@ -176,52 +201,6 @@
         .event-container {
           width: 100%;
         }
-      }
-    }
-  }
-}
-
-body.dark {
-  .about-page {
-    .profile-pic {
-      border: 1px solid $dark-primaryColor;
-    }
-
-    .about-text {
-      h2 {
-        color: $dark-primaryColor;
-
-        span {
-          color: $dark-accent;
-        }
-      }
-
-      p {
-        color: $dark-primaryColor;
-      }
-
-      .brand-statement {
-        background-color: darken($dark-darkAccent, 10%);
-        &.second {
-          background: none;
-          color: $dark-accent;
-          border: 2px solid $dark-accent;
-        }
-      }
-    }
-
-    .entries-container {
-      .entry {
-        &:nth-of-type(2n) {
-          color: $dark-liteAccent;
-          .event-container {
-            border: 1px $dark-darkAccent solid;
-          }
-        }
-      }
-
-      .event-container {
-        border: 1px $dark-primaryColor solid;
       }
     }
   }
