@@ -9,6 +9,7 @@
     font-style: normal;
     font-size: $galleryTitleFontSize;
     margin-bottom: 10px;
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
 
     span {
       font-family: $fontTitle;
@@ -16,7 +17,7 @@
       font-style: normal;
       font-size: $galleryTitleFontSize;
       margin-right: 10px;
-      color: $accent;
+      @include darkThemeHelper(color, $accent, $dark-accent);
     }
   }
   .snap-gallery {
@@ -69,18 +70,6 @@
       .image-container {
         width: 100%;
         margin: 0;
-      }
-    }
-  }
-}
-
-body.dark {
-  .snap-gallery-page {
-    .gallery-title {
-      color: $dark-primaryColor;
-
-      span {
-        color: $dark-accent;
       }
     }
   }

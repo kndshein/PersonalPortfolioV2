@@ -9,6 +9,7 @@
     font-style: normal;
     font-size: $galleryTitleFontSize;
     margin-bottom: 10px;
+    @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
   }
 
   .cards-container {
@@ -84,14 +85,6 @@
           height: 20%;
         }
       }
-    }
-  }
-}
-
-body.dark {
-  .code-page {
-    .code-title {
-      color: $dark-primaryColor;
     }
   }
 }
