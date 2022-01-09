@@ -18,9 +18,21 @@
     height: 60%;
     width: 100%;
     padding: 35px 25px 25px 25px;
-    border-left: 2px solid $primaryColor;
-    border-bottom: 2px solid $primaryColor;
-    border-right: 2px solid $primaryColor;
+    @include darkThemeHelper(
+      border-left,
+      2px solid $primaryColor,
+      2px solid $dark-liteAccent
+    );
+    @include darkThemeHelper(
+      border-bottom,
+      2px solid $primaryColor,
+      2px solid $dark-liteAccent
+    );
+    @include darkThemeHelper(
+      border-right,
+      2px solid $primaryColor,
+      2px solid $dark-liteAccent
+    );
 
     .logo-container {
       position: absolute;
@@ -51,6 +63,20 @@
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -20px;
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
+
+        &:hover {
+          @include darkThemeHelper(color, $accent, $dark-liteAccent);
+        }
+      }
+
+      &::before,
+      &::after {
+        @include darkThemeHelper(
+          border-top,
+          2px solid $primaryColor,
+          2px solid $dark-liteAccent
+        );
       }
     }
 
@@ -68,7 +94,7 @@
         overflow: hidden;
 
         a {
-          color: $primaryColor;
+          @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
         }
 
         .link-title {
@@ -86,9 +112,10 @@
           span {
             font-weight: 300;
             font-size: clamp(2rem, 1.75vw, 3.25rem);
+            @include darkThemeHelper(color, $primaryColor, $dark-liteAccent);
 
             &:nth-child(2n) {
-              color: $accent;
+              @include darkThemeHelper(color, $accent, $dark-accent);
             }
           }
         }
@@ -118,6 +145,7 @@
     div {
       span {
         font-size: 1.5rem;
+        @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
       }
     }
 
@@ -137,6 +165,13 @@
           svg {
             width: 20px;
             height: 20px;
+            @include darkThemeHelper(fill, $primaryColor, $dark-liteAccent);
+          }
+
+          &:hover {
+            svg {
+              @include darkThemeHelper(fill, $accent, $dark-primaryColor);
+            }
           }
         }
       }
@@ -178,115 +213,39 @@
   }
 }
 
-body.dark {
-  .homepage-container {
-    .links-container {
-      border-left: 2px solid $dark-liteAccent;
-      border-bottom: 2px solid $dark-liteAccent;
-      border-right: 2px solid $dark-liteAccent;
-
-      .logo-container {
-        .logo-content {
-          color: $dark-primaryColor;
-
-          &:hover {
-            color: $dark-liteAccent;
-          }
-        }
-
-        &::before,
-        &::after {
-          border-top: 2px solid $dark-liteAccent;
-        }
-      }
-
-      .links {
-        .code,
-        .snap,
-        .design,
-        .about {
-          a {
-            color: $dark-primaryColor;
-          }
-
-          .link-hover {
-            span {
-              color: $dark-liteAccent;
-
-              &:nth-child(2n) {
-                color: $dark-accent;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .social-links {
-    div {
-      span {
-        color: $dark-primaryColor;
-      }
-    }
-
-    ul {
-      li {
-        a {
-          svg {
-            fill: $dark-liteAccent;
-          }
-
-          &:hover {
-            svg {
-              fill: $dark-primaryColor;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @import "../components/themetoggler";
 
 @media (hover: none), (hover: on-demand) {
   .homepage-container {
     .links-container {
-      .links {
-        .code,
-        .snap,
-        .design,
-        .about {
+      .logo-container {
+        .logo-content {
           &:hover {
-            .link-hover {
-              display: none;
-            }
+            @include darkThemeHelper(color, $primaryColor, $dark-primaryColor);
           }
         }
       }
-    }
-  }
-
-  body.dark {
-    .homepage-container {
       .links-container {
-        .logo-container {
-          .logo-content {
+        .links {
+          .code,
+          .snap,
+          .design,
+          .about {
             &:hover {
-              color: $dark-primaryColor;
+              .link-hover {
+                @include darkThemeHelper(display, none, none);
+              }
             }
           }
         }
       }
-
       .social-links {
         ul {
           li {
             a {
               &:hover {
                 svg {
-                  fill: $dark-liteAccent;
+                  @include darkThemeHelper(fill, $liteAccent, $dark-liteAccent);
                 }
               }
             }
