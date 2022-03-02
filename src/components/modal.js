@@ -37,14 +37,14 @@ const Modal = ({ cardData, showModal, handleModal }) => {
                 })}
               </div>
               <div className="description">{cardData.description}</div>
-              <div className="features">
+              {/* <div className="features">
                 <div className="features-title">Features</div>
                 <ul className="features-list">
                   {cardData.features.Features.map((feature, index) => {
                     return <li key={index}>{feature}</li>;
                   })}
                 </ul>
-              </div>
+              </div> */}
               <div className="links">
                 {cardData.links.Livelink && (
                   <a
