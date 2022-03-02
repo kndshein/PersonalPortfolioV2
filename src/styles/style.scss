@@ -95,6 +95,10 @@ body {
   .italic {
     font-style: italic;
   }
+
+  &.modal-disable {
+    overflow: hidden;
+  }
 }
 
 @import "./components/navbar";

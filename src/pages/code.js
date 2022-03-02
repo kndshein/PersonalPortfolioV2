@@ -16,6 +16,7 @@ const CodePage = ({ data }) => {
     } else {
       setShowModal(true);
       setModalCard(data.projects.edges[index].node);
+      document.body.className = "modal-disable";
     }
   };
 
