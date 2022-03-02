@@ -13,10 +13,17 @@ const CodePage = ({ data }) => {
   const handleModal = (index) => {
     if (showModal) {
       setShowModal(false);
+      document.body.className = "";
     } else {
       setShowModal(true);
       setModalCard(data.projects.edges[index].node);
       document.body.className = "modal-disable";
+    }
+  };
+
+  const handleEscPress = (event) => {
+    if (showModal && event.keyCode === 27) {
+      handleModal();
     }
   };
 
@@ -40,7 +47,7 @@ const CodePage = ({ data }) => {
                   onClick={() => handleModal(index)}
                   role="button"
                   tabIndex="0"
-                  onKeyPress={() => handleModal(index)}
+                  onKeyDown={handleEscPress}
                 >
                   <div className="card-title">{project.node.title}</div>
                   <div className="card-image">

@@ -11,15 +11,13 @@ const Modal = ({ cardData, showModal, handleModal }) => {
             onClick={() => handleModal()}
             aria-hidden={true}
           />
-          <div
+          <button
             className="close-icon"
             onClick={() => handleModal()}
-            role="button"
             tabIndex="0"
-            onKeyPress={() => handleModal()}
           >
             <MdClose color="white" size={40} />
-          </div>
+          </button>
           <div className="card-container">
             <div className="title">{cardData.title}</div>
             <div className="preview-container">
