@@ -6,11 +6,7 @@ const Modal = ({ cardData, showModal, handleModal }) => {
     <>
       {showModal && (
         <div className="modal">
-          <div
-            className="modal-background"
-            onClick={() => handleModal()}
-            aria-hidden={true}
-          />
+          <div className="modal-background" aria-hidden={true} />
           <button
             className="close-icon"
             onClick={() => handleModal()}

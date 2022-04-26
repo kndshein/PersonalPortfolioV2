@@ -11,16 +11,46 @@ import { motion } from "framer-motion";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Modal from "./modal";
 
 export const ModalContext = createContext(null);
 
 const Layout = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
+  const [modalCardData, setModalCardData] = React.useState(null);
+
+  const handleModal = (data) => {
+    if (showModal) {
+      setShowModal(false);
+      setModalCardData(null);
+      document.body.className = "";
+    } else {
+      setShowModal(true);
+      setModalCardData(data);
+      document.body.className = "modal-disable";
+    }
+  };
+
+  const handleEscPress = (event) => {
+    if (showModal && event.keyCode === 27) {
+      handleModal();
+    }
+  };
+
   return (
     <>
+      <Modal
+        cardData={modalCardData}
+        showModal={showModal}
+        handleModal={handleModal}
+      />
       <Navbar />
       <ModalContext.Provider
-        value={{ showModal: showModal, setShowModal: setShowModal }}
+        value={{
+          showModal: showModal,
+          setShowModal: setShowModal,
+          handleModal: handleModal,
+        }}
       >
         <motion.main
           initial={{ opacity: 0 }}
