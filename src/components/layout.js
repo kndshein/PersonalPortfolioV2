@@ -17,16 +17,16 @@ export const ModalContext = createContext(null);
 
 const Layout = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
-  const [modalCardData, setModalCardData] = React.useState(null);
+  const [modalData, setModalData] = useState({ data: null, type: null });
 
-  const handleModal = (data) => {
-    if (showModal) {
+  const handleModal = (data, type) => {
+    if (!data && showModal) {
       setShowModal(false);
-      setModalCardData(null);
+      setModalData({ data: null, type: null });
       document.body.className = "";
     } else {
       setShowModal(true);
-      setModalCardData(data);
+      setModalData({ data: data, type: type });
       document.body.className = "modal-disable";
     }
   };
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Modal
-        cardData={modalCardData}
+        modalData={modalData}
         showModal={showModal}
         handleModal={handleModal}
       />
