@@ -29,7 +29,11 @@ const SnapGallery = ({ data }) => {
               <div className={`column-${columnIndex + 1}`} key={columnIndex}>
                 {column.map((image, imageIndex) => {
                   return (
-                    <Image image={image} imageArray={images} key={imageIndex} />
+                    <Image
+                      index={columnIndex * 3 + imageIndex}
+                      imageArray={data.gallery.images}
+                      key={imageIndex}
+                    />
                   );
                 })}
               </div>

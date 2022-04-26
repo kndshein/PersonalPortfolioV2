@@ -112,12 +112,12 @@ const Modal = ({ modalData, showModal, handleModal }) => {
               </div>
             </div>
           )}
-          {type === "image" && (
+          {type === "image" && dataArray[cardIndex] && (
             <div className="image-container">
               <GatsbyImage
                 className="image"
-                image={dataArray[cardIndex].node.gatsbyImageData}
-                alt={dataArray[cardIndex].node.description}
+                image={dataArray[cardIndex].gatsbyImageData}
+                alt={dataArray[cardIndex].description}
               />
             </div>
           )}

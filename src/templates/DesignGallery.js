@@ -16,7 +16,7 @@ const DesignGallery = ({ data }) => {
         </div>
         {data.gallery.images.map((image, index) => {
           return (
-            <Image image={image} imageArray={data.gallery.images} key={index} />
+            <Image index={index} imageArray={data.gallery.images} key={index} />
           );
         })}
       </div>
