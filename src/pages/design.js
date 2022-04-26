@@ -6,7 +6,6 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const DesignPage = ({ data }) => {
-  // console.log(data);
   return (
     <Layout>
       <Seo title="I Design" />

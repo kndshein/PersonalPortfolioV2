@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
+import Image from "../components/image";
 import Seo from "../components/seo";
 
 const SnapGallery = ({ data }) => {
@@ -13,7 +13,6 @@ const SnapGallery = ({ data }) => {
     images.push(data.gallery.images.slice(0, column));
     images.push(data.gallery.images.slice(column, column * 2));
     images.push(data.gallery.images.slice(column * 2));
-    // console.log(images);
   }, []);
 
   return (
@@ -29,15 +28,7 @@ const SnapGallery = ({ data }) => {
             return (
               <div className={`column-${columnIndex + 1}`} key={columnIndex}>
                 {column.map((image, imageIndex) => {
-                  return (
-                    <div className="image-container" key={imageIndex}>
-                      <GatsbyImage
-                        className="image"
-                        image={image.gatsbyImageData}
-                        alt={image.description}
-                      />
-                    </div>
-                  );
+                  return <Image image={image} key={imageIndex} />;
                 })}
               </div>
             );
@@ -51,7 +42,7 @@ const SnapGallery = ({ data }) => {
 export default SnapGallery;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     gallery: contentfulSnapGallery(slug: { eq: $slug }) {
       slug
       galleryTitle
