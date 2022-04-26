@@ -35,7 +35,9 @@ const Modal = ({ modalData, showModal, handleModal }) => {
     setCardIndex(index);
   }, [index]);
 
-  window.addEventListener("keydown", downHandler);
+  if (typeof window !== "undefined") {
+    window.addEventListener("keydown", downHandler);
+  }
 
   return (
     <>
