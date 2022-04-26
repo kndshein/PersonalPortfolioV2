@@ -39,6 +39,8 @@ const Modal = ({ modalData, showModal, handleModal }) => {
     window.addEventListener("keydown", downHandler);
   }
 
+  console.log(modalData);
+
   return (
     <>
       {showModal && (

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import { ModalContext } from "./layout";
+import { useModal } from "./modalcontext";
 
 const Image = ({ image, imageArray }) => {
-  const { handleModal } = useContext(ModalContext);
+  const { handleModal } = useModal();
   let images = imageArray.flat();
 
   return (
@@ -17,6 +17,7 @@ const Image = ({ image, imageArray }) => {
           let index = images.findIndex(
             (_image) => _image.contentful_id === image.contentful_id
           );
+          console.log(index, images);
           handleModal(index, "image", images);
         }}
       />

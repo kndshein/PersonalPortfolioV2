@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const React = require("react");
+const { ModalProvider } = require("./src/components/modalcontext");
 
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
@@ -17,7 +18,6 @@ exports.onRenderBody = ({ setHeadComponents }) => {
           // From Victor https://victorzhou.com/blog/dark-mode-gatsby/
           function setTheme(theme) {
             window.__theme = theme;
-            console.log("Theme updated:", theme);
 
             if (theme === "dark") {
               document.documentElement.className = "dark";
@@ -49,3 +49,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
     />,
   ]);
 };
+
+exports.wrapRootElement = ({ element }) => (
+  <ModalProvider>{element}</ModalProvider>
+);

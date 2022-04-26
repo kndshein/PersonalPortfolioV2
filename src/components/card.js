@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import { ModalContext } from "./layout";
+import { useModal } from "./modalcontext";
 
 const Card = ({ index, videoArray }) => {
-  const { handleModal } = useContext(ModalContext);
+  const { handleModal } = useModal();
 
   return (
     <button

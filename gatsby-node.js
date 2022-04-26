@@ -1,13 +1,13 @@
 const path = require("path");
 const slash = require("slash");
 
-exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
-  if (getConfig().mode === "production") {
-    actions.setWebpackConfig({
-      devtool: false,
-    });
-  }
-};
+// exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+//   if (getConfig().mode === "production") {
+//     actions.setWebpackConfig({
+//       devtool: false,
+//     });
+//   }
+// };
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
