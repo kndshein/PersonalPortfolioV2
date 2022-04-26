@@ -3,8 +3,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import { ModalContext } from "./layout";
 
-const Image = ({ image }) => {
-  const { setShowModal } = useContext(ModalContext);
+const Image = ({ image, imageArray }) => {
+  const { handleModal } = useContext(ModalContext);
 
   return (
     <div className="image-container">
@@ -12,7 +12,7 @@ const Image = ({ image }) => {
         className="image"
         image={image.gatsbyImageData}
         alt={image.description}
-        onClick={() => setShowModal(true)}
+        onClick={() => handleModal(image, "image", imageArray.flat())}
       />
     </div>
   );

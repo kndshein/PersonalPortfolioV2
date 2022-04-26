@@ -17,16 +17,20 @@ export const ModalContext = createContext(null);
 
 const Layout = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
-  const [modalData, setModalData] = useState({ data: null, type: null });
+  const [modalData, setModalData] = useState({
+    data: null,
+    type: null,
+    dataArray: null,
+  });
 
-  const handleModal = (data, type) => {
+  const handleModal = (data, type, dataArray) => {
     if (!data && showModal) {
       setShowModal(false);
-      setModalData({ data: null, type: null });
+      setModalData({ data: null, type: null, dataArray: null });
       document.body.className = "";
     } else {
       setShowModal(true);
-      setModalData({ data: data, type: type });
+      setModalData({ data: data, type: type, dataArray: dataArray });
       document.body.className = "modal-disable";
     }
   };

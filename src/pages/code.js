@@ -13,7 +13,13 @@ const CodePage = ({ data }) => {
         <div className="code-title">Code</div>
         <div className="cards-container">
           {data.projects.edges.map((project, index) => {
-            return <Card data={project.node} key={index} />;
+            return (
+              <Card
+                data={project.node}
+                videoArray={data.projects.edges}
+                key={index}
+              />
+            );
           })}
         </div>
       </div>
