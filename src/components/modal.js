@@ -114,10 +114,16 @@ const Modal = ({ modalData, showModal, handleModal }) => {
           )}
           {type === "image" && dataArray[cardIndex] && (
             <div className="image-container">
+              {/* <img
+                className="image"
+                src={`${dataArray[cardIndex].gatsbyImageData.images.fallback.src}`}
+                alt={dataArray[cardIndex].description}
+              /> */}
               <GatsbyImage
                 className="image"
                 image={dataArray[cardIndex].gatsbyImageData}
                 alt={dataArray[cardIndex].description}
+                objectFit="contain"
               />
             </div>
           )}
