@@ -3,24 +3,25 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import { ModalContext } from "./layout";
 
-const Image = ({ index, imageArray }) => {
+const Image = ({ image, imageArray }) => {
   const { handleModal } = useContext(ModalContext);
   let images = imageArray.flat();
-  console.log(images, index);
+  console.log(images);
 
   return (
-    <>
-      {images[index] && (
-        <div className="image-container">
-          <GatsbyImage
-            className="image"
-            image={images[index].gatsbyImageData}
-            alt={images[index].description}
-            onClick={() => handleModal(index, "image", images)}
-          />
-        </div>
-      )}
-    </>
+    <div className="image-container">
+      <GatsbyImage
+        className="image"
+        image={image.gatsbyImageData}
+        alt={image.description}
+        onClick={() => {
+          let index = images.findIndex(
+            (_image) => _image.contentful_id === image.contentful_id
+          );
+          handleModal(index, "image", images);
+        }}
+      />
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ const DesignGallery = ({ data }) => {
         </div>
         {data.gallery.images.map((image, index) => {
           return (
-            <Image index={index} imageArray={data.gallery.images} key={index} />
+            <Image image={image} imageArray={data.gallery.images} key={index} />
           );
         })}
       </div>
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         title
         description
         gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 75)
+        contentful_id
       }
     }
   }

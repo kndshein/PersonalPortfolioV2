@@ -30,7 +30,7 @@ const SnapGallery = ({ data }) => {
                 {column.map((image, imageIndex) => {
                   return (
                     <Image
-                      index={columnIndex * 3 + imageIndex}
+                      image={image}
                       imageArray={data.gallery.images}
                       key={imageIndex}
                     />
@@ -56,6 +56,7 @@ export const pageQuery = graphql`
         title
         description
         gatsbyImageData(layout: FULL_WIDTH, formats: [JPG], quality: 75)
+        contentful_id
       }
     }
   }
