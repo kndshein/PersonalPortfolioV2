@@ -34,7 +34,10 @@
 
   .card-container {
     z-index: 1;
+    margin: 25px 0;
+    padding: 20px;
     width: clamp(350px, 60vw, 700px);
+    overflow-y: auto;
 
     .title {
       z-index: 1;
@@ -49,6 +52,7 @@
 
     .preview-container {
       width: 100%;
+      padding-bottom: -10px;
 
       video {
         width: 100%;

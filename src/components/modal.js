@@ -10,6 +10,8 @@ const Modal = ({ modalData, showModal, handleModal }) => {
     setCardData(data);
   }, [data]);
 
+  console.log(data);
+
   return (
     <>
       {showModal && cardData && (
