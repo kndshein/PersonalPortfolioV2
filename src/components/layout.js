@@ -35,12 +35,6 @@ const Layout = ({ children }) => {
     }
   };
 
-  const handleEscPress = (event) => {
-    if (showModal && event.keyCode === 27) {
-      handleModal();
-    }
-  };
-
   return (
     <>
       <Modal

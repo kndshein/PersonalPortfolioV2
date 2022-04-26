@@ -11,12 +11,6 @@ const Modal = ({ modalData, showModal, handleModal }) => {
   const { index, type, dataArray } = modalData;
   const [cardIndex, setCardIndex] = useState(null);
 
-  useEffect(() => {
-    setCardIndex(index);
-  }, [index]);
-
-  console.log(dataArray, index);
-
   const handleLeft = () => {
     if (cardIndex > 0) {
       setCardIndex(cardIndex - 1);
@@ -28,6 +22,20 @@ const Modal = ({ modalData, showModal, handleModal }) => {
       setCardIndex(cardIndex + 1);
     }
   };
+
+  const downHandler = ({ keyCode }) => {
+    if (showModal) {
+      if (keyCode === 27) {
+        handleModal();
+      }
+    }
+  };
+
+  useEffect(() => {
+    setCardIndex(index);
+  }, [index]);
+
+  window.addEventListener("keydown", downHandler);
 
   return (
     <>
@@ -41,16 +49,24 @@ const Modal = ({ modalData, showModal, handleModal }) => {
           >
             <MdClose color="white" size={40} />
           </button>
-          <button className="arrow-icon left" onClick={handleLeft} tabIndex="0">
-            <MdChevronLeft color="white" size={50} />
-          </button>
-          <button
-            className="arrow-icon right"
-            onClick={handleRight}
-            tabIndex="0"
-          >
-            <MdChevronRight color="white" size={50} />
-          </button>
+          {cardIndex > 0 && (
+            <button
+              className="arrow-icon left"
+              onClick={handleLeft}
+              tabIndex="0"
+            >
+              <MdChevronLeft color="white" size={50} />
+            </button>
+          )}
+          {cardIndex < dataArray.length - 1 && (
+            <button
+              className="arrow-icon right"
+              onClick={handleRight}
+              tabIndex="0"
+            >
+              <MdChevronRight color="white" size={50} />
+            </button>
+          )}
           {type === "video" && dataArray[cardIndex] && (
             <div className="card-container">
               <div className="title">{dataArray[cardIndex].node.title}</div>

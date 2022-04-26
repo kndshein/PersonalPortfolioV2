@@ -6,7 +6,6 @@ import { ModalContext } from "./layout";
 const Image = ({ image, imageArray }) => {
   const { handleModal } = useContext(ModalContext);
   let images = imageArray.flat();
-  console.log(images);
 
   return (
     <div className="image-container">

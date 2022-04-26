@@ -8,7 +8,6 @@ const Form = () => {
       method: "POST",
       body: new FormData(document.forms["submit-to-google-sheet"]),
     }).then(setFormSubmit(true));
-    // .catch((error) => console.error("Error!", error.message));
   };
 
   return (
