@@ -23,14 +23,14 @@ const Layout = ({ children }) => {
     dataArray: null,
   });
 
-  const handleModal = (data, type, dataArray) => {
-    if (!data && showModal) {
+  const handleModal = (index, type, dataArray) => {
+    if (!index && showModal) {
       setShowModal(false);
-      setModalData({ data: null, type: null, dataArray: null });
+      setModalData({ index: null, type: null, dataArray: null });
       document.body.className = "";
     } else {
       setShowModal(true);
-      setModalData({ data: data, type: type, dataArray: dataArray });
+      setModalData({ index: index, type: type, dataArray: dataArray });
       document.body.className = "modal-disable";
     }
   };

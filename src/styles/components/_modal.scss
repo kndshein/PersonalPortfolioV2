@@ -32,11 +32,28 @@
     border: none;
   }
 
+  .arrow-icon {
+    z-index: 10;
+    position: absolute;
+    top: 45%;
+    margin: 15px;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
   .card-container {
     z-index: 1;
-    margin: 25px 0;
     padding: 20px;
-    width: clamp(350px, 60vw, 700px);
+    width: clamp(300px, 70vw, 900px);
     overflow-y: auto;
 
     .title {

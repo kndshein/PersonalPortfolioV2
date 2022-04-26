@@ -1,20 +1,37 @@
 import React, { useState, useEffect } from "react";
-import { MdClose, MdOpenInNew } from "react-icons/md";
+import {
+  MdClose,
+  MdOpenInNew,
+  MdChevronLeft,
+  MdChevronRight,
+} from "react-icons/md";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Modal = ({ modalData, showModal, handleModal }) => {
-  const { data, type, dataArray } = modalData;
-  const [cardData, setCardData] = useState(null);
+  const { index, type, dataArray } = modalData;
+  const [cardIndex, setCardIndex] = useState(null);
 
   useEffect(() => {
-    setCardData(data);
-  }, [data]);
+    setCardIndex(index);
+  }, [index]);
 
-  console.log(data);
+  console.log(dataArray, index);
+
+  const handleLeft = () => {
+    if (cardIndex > 0) {
+      setCardIndex(cardIndex - 1);
+    }
+  };
+
+  const handleRight = () => {
+    if (cardIndex < dataArray.length - 1) {
+      setCardIndex(cardIndex + 1);
+    }
+  };
 
   return (
     <>
-      {showModal && cardData && (
+      {showModal && (
         <div className="modal">
           <div className="modal-background" aria-hidden={true} />
           <button
@@ -24,41 +41,56 @@ const Modal = ({ modalData, showModal, handleModal }) => {
           >
             <MdClose color="white" size={40} />
           </button>
-          {type === "video" && (
+          <button className="arrow-icon left" onClick={handleLeft} tabIndex="0">
+            <MdChevronLeft color="white" size={50} />
+          </button>
+          <button
+            className="arrow-icon right"
+            onClick={handleRight}
+            tabIndex="0"
+          >
+            <MdChevronRight color="white" size={50} />
+          </button>
+          {type === "video" && dataArray[cardIndex] && (
             <div className="card-container">
-              <div className="title">{cardData.title}</div>
+              <div className="title">{dataArray[cardIndex].node.title}</div>
               <div className="preview-container">
-                <video autoPlay loop muted playsInline>
-                  <source src={cardData.preview.file.url} type="video/mp4" />
+                <video autoPlay loop muted playsInline key={cardIndex}>
+                  <source
+                    src={dataArray[cardIndex].node.preview.file.url}
+                    type="video/mp4"
+                  />
                 </video>
               </div>
               <div className="text-container">
-                {!cardData.links.Livelink && (
+                {!dataArray[cardIndex].node.links.Livelink && (
                   <div className="construction-text">
                     Project currently under construction.
                   </div>
                 )}
                 <div className="technologies">
-                  {cardData.technologies.Technologies.map(
+                  {dataArray[cardIndex].node.technologies.Technologies.map(
                     (technology, index) => {
                       return <span key={index}>{technology}</span>;
                     }
                   )}
                 </div>
-                <div className="description">{cardData.description}</div>
+                <div className="description">
+                  {dataArray[cardIndex].node.description}
+                </div>
                 {/* <div className="features">
                 <div className="features-title">Features</div>
                 <ul className="features-list">
-                  {cardData.features.Features.map((feature, index) => {
+                  {dataArray[index].node.features.Features.map((feature, index) => {
                     return <li key={index}>{feature}</li>;
                   })}
                 </ul>
               </div> */}
                 <div className="links">
-                  {cardData.links.Livelink && (
+                  {dataArray[cardIndex].node.links.Livelink && (
                     <a
                       className="live-link"
-                      href={cardData.links.Livelink}
+                      href={dataArray[cardIndex].node.links.Livelink}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -69,7 +101,7 @@ const Modal = ({ modalData, showModal, handleModal }) => {
                   )}
                   <a
                     className="github-link"
-                    href={cardData.links.GitHub}
+                    href={dataArray[cardIndex].node.links.GitHub}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -84,8 +116,8 @@ const Modal = ({ modalData, showModal, handleModal }) => {
             <div className="image-container">
               <GatsbyImage
                 className="image"
-                image={cardData.gatsbyImageData}
-                alt={cardData.description}
+                image={dataArray[cardIndex].node.gatsbyImageData}
+                alt={dataArray[cardIndex].node.description}
               />
             </div>
           )}

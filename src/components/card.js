@@ -3,20 +3,20 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import { ModalContext } from "./layout";
 
-const Card = ({ data, videoArray }) => {
+const Card = ({ index, videoArray }) => {
   const { handleModal } = useContext(ModalContext);
 
   return (
     <button
       className="card-container"
-      onClick={() => handleModal(data, "video", videoArray)}
+      onClick={() => handleModal(index, "video", videoArray)}
     >
-      <div className="card-title">{data.title}</div>
+      <div className="card-title">{videoArray[index].node.title}</div>
       <div className="card-image">
         <GatsbyImage
           className="image"
-          image={data.image.gatsbyImageData}
-          alt={data.image.description}
+          image={videoArray[index].node.image.gatsbyImageData}
+          alt={videoArray[index].node.image.description}
         />
       </div>
     </button>
