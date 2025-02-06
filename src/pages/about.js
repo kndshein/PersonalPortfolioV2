@@ -116,7 +116,7 @@ const AboutPage = ({ data }) => {
             );
           })}
         </div>
-        <Form />
+        {/* <Form /> */}
       </div>
     </Layout>
   );
